@@ -7,15 +7,16 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #c1e0e0;
+            background-color: #f4f7f9; /* Color de fondo suave y profesional */
             margin: 20px;
         }
         .container {
             width: 80%;
             margin: auto;
-            background-color: #f0f8ff;
+            background-color: #ffffff;
             padding: 20px;
             border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         h2, h3, h4 {
             color: #004080;
@@ -27,6 +28,7 @@
         }
         ul {
             list-style-type: square;
+            padding-left: 20px;
         }
         hr {
             border: 1px solid #004080;
@@ -40,6 +42,26 @@
             margin-left: 20px;
             font-style: italic;
         }
+        img {
+            border-radius: 10px;
+            border: 2px solid #004080;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table, th, td {
+            border: 1px solid #004080;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #004080;
+            color: white;
+        }
     </style>
 </head>
 <body>
@@ -47,8 +69,87 @@
         <h2>Lic. David Isaac Ortega Navarro</h2>
         <hr />
         
+        <h3>INFORMACIÓN PERSONAL</h3>
+        <img src="IMG_20220111_194651.png" align="right" height="210px" width="210px">
+        <ul>
+            <li>Cédula de Identidad: 8-819-2187</li>
+            <li>Nacionalidad: Panameño</li>
+            <li>Fecha de Nacimiento: 12 de Octubre de 1988</li>
+            <li>Lugar de nacimiento: Panamá, Panamá</li>
+            <li>Sexo: Masculino</li>
+            <li>Teléfono: 66793944/392-9190</li>
+            <li>Correo Electrónico: dortegana@hotmail.com</li>
+        </ul>
+        <hr />
+
+        <h3>OBJETIVO</h3>
+        <p>Adquirir responsabilidades que permitan desarrollar mis habilidades, adquirir mayores conocimientos y poder desempeñarme con excelencia profesional.</p>
+        <hr />
+
+        <h3>EDUCACIÓN</h3>
+        <table>
+            <tr>
+                <th>Centro Educativo</th>
+                <th>Diploma/Certificado</th>
+            </tr>
+            <tr>
+                <td>Universidad Tecnológica de Panamá</td>
+                <td>Licenciado en Electrónica y Sistemas de Comunicación</td>
+            </tr>
+            <tr>
+                <td>Universidad Tecnológica de Panamá</td>
+                <td>Técnico en Ingeniería Con Especialización en Electrónica y Sistemas de Comunicación</td>
+            </tr>
+            <tr>
+                <td>Universidad Latina de Panamá</td>
+                <td>Maestría en Gerencia Informática con Énfasis en Seguridad Computacional</td>
+            </tr>
+            <tr>
+                <td>Cisco Networking Academy</td>
+                <td>CCNA Routing and Switching</td>
+            </tr>
+        </table>
+        <form>
+            <input type="button" onclick="mostrar('DiplomaLicenciatura')" value="Mostrar/Ocultar Diploma de Licenciatura">
+            <img src="Licenciatura.png" height="519" width="662" class="oculto" id="DiplomaLicenciatura">
+            <input type="button" onclick="mostrar('DiplomaTecnico')" value="Mostrar/Ocultar Diploma de Técnico">
+            <img src="Tecnico.png" height="519" width="662" class="oculto" id="DiplomaTecnico">
+            <input type="button" onclick="mostrar('DiplomaMaestria')" value="Mostrar/Ocultar Diploma de Maestría">
+            <img src="Maestria.png" height="519" width="662" class="oculto" id="DiplomaMaestria">
+            <input type="button" onclick="mostrar('CertificadoCCNA')" value="Mostrar/Ocultar Certificado de CCNA">
+            <img src="CCNA.png" height="519" width="662" class="oculto" id="CertificadoCCNA">
+        </form>
+        <hr />
+
+        <h3>CURSOS Y SEMINARIOS</h3>
+        <ul>
+            <li>Seminario de Fibra Óptica.</li>
+            <li>Seminario de Cableado Estructurado.</li>
+            <li>Seminario Televisión Digital en Panamá (Los Desafíos del Apagón Analógico).</li>
+        </ul>
+        <hr />
+
+        <h3>IDIOMAS</h3>
+        <ul>
+            <li>Español</li>
+            <li>Inglés (intermedio)</li>
+        </ul>
+        <hr />
+
+        <h3>CONOCIMIENTOS Y DESTREZAS</h3>
+        <ul>
+            <li>Manejo de Sistemas Computacionales (Hardware y Software).</li>
+            <li>Conocimiento de Redes de Internet.</li>
+            <li>Configuración y troubleshooting de Equipos de Comunicación (Switch, Router, CMTS, OCCAM, equipos de Voz IAD, MP-124, etc.).</li>
+            <li>Conocimiento de redes inalámbricas.</li>
+            <li>Telefonía móvil.</li>
+            <li>Reparación, Mantenimiento e instalación de Equipos Electrónicos.</li>
+            <li>Instalación y configuración de sistemas de seguridad.</li>
+        </ul>
+        <hr />
+
         <h3>EXPERIENCIA LABORAL</h3>
-        
+
         <div class="job">
             <h4 class="job-title">Técnico de Señalización (ALSTOM Panamá) - Febrero/2024 al Presente</h4>
             <ul class="job-details">
@@ -62,17 +163,61 @@
             <h4 class="job-title">Técnico de Energía (ALSTOM Panamá) - Enero/2022 - Febrero/2024</h4>
             <ul class="job-details">
                 <li>Realizar las actividades de mantenimiento del Suministro Eléctrico en las Subestaciones Eléctricas y gabinetes eléctricos.</li>
-                <li>Contribuir al desarrollo de procesos, métodos y herramientas, utilizar herramientas adecuadas para la ejecución del mantenimiento.</li>
+                <li>Contribuir al desarrollo de procesos, métodos y herramientas, utilizando herramientas adecuadas para la ejecución del mantenimiento.</li>
                 <li>Realizar un mantenimiento preventivo para que el sistema energético ferroviario funcione correctamente.</li>
                 <li>Realizar análisis y tomar acciones para solucionar las fallas que se presenten en toda la línea 2 del metro de Panamá.</li>
             </ul>
         </div>
 
-        <!-- Resto de la experiencia laboral sigue el mismo formato -->
-        
-        <hr />
+        <div class="job">
+            <h4 class="job-title">Técnico de Material Rodante (ALSTOM Panamá) - Diciembre/2019 - Diciembre/2022</h4>
+            <ul class="job-details">
+                <li>Realizar las operaciones de mantenimientos correctivos y preventivos sobre los coches del metro.</li>
+                <li>Análisis y resolución de averías, incluyendo la elaboración de informes de investigación, si fuera necesario.</li>
+                <li>Seguimiento de problemas repetitivos en el Material Rodante, proponiendo líneas de investigación para la resolución de las mismas.</li>
+                <li>Análisis de los registros de software de mantenimiento de los equipos embarcados, para optimizar el mantenimiento del Material Rodante.</li>
+            </ul>
+        </div>
 
+        <div class="job">
+            <h4 class="job-title">Ingeniero de Pruebas y Puesta en Marcha (ALSTOM Panamá) - Junio/2018 - Diciembre/2019</h4>
+            <ul class="job-details">
+                <li>Encargado de las pruebas a nivel de todos los subsistemas del Sistema Ferroviario.</li> 
+                <li>Producir y ejecutar planes de pruebas específicas para actividades de Sub-Sistemas (Señalización, Comunicación, Energía, Material Rodante).</li> 
+                <li>Producción y ejecución de pruebas de funcionalidad y rendimiento en las diferentes fases del Proyecto.</li>
+                <li>Reportar fallos al jefe de pruebas.</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <h4 class="job-title">Técnico de Campo, Servicios Especiales (Cable & Wireless Panamá) - Septiembre/2016 - Junio/2018</h4>
+            <ul class="job-details">
+                <li>Encargado de la instalación y mantenimiento de servicios especiales de internet dedicado, circuitos dedicados de datos y telefonía de cuentas corporativas.</li> 
+                <li>Instalación y configuración de equipos de clientes como: Switch, Router, Access Point.</li>
+                <li>Mantenimiento y reparación de equipos de comunicación como: CMTS, Switch, Router, Access Point.</li>
+                <li>Mantenimiento y reparación de cableado estructurado.</li>
+                <li>Supervisión de contratistas que realizaban trabajos para la empresa.</li>
+                <li>Desarrollar reportes sobre las incidencias presentadas en los diferentes servicios.</li>
+            </ul>
+        </div>
+
+        <hr />
+        
+        <h3>REFERENCIAS</h3>
+        <p>Se proporcionarán a solicitud.</p>
     </div>
+
+    <script>
+        function mostrar(id) {
+            var elemento = document.getElementById(id);
+            if (elemento.classList.contains('oculto')) {
+                elemento.classList.remove('oculto');
+            } else {
+                elemento.classList.add('oculto');
+            }
+        }
+    </script>
 </body>
 </html>
+
 
