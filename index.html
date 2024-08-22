@@ -22,14 +22,14 @@
         .oculto {
             display: none;
         }
-        .experiencia-laboral, .cuadro {
+        .experiencia-laboral, table {
             background-color: #e6f7f7;
-            padding: 15px;
             border-radius: 10px;
+            padding: 15px;
             margin-bottom: 20px;
             border: 1px solid #b3d9d9;
         }
-        .experiencia-laboral h4, .cuadro h4 {
+        .experiencia-laboral h4 {
             color: #003366;
         }
         .experiencia-laboral ul {
@@ -37,12 +37,28 @@
         }
         table {
             width: 100%;
-            border-collapse: collapse;
+            border-collapse: separate;
+            border-spacing: 0;
+            margin-bottom: 20px;
         }
-        table, th, td {
-            border: none;
+        th, td {
+            border: 1px solid #b3d9d9;
             padding: 10px;
             text-align: left;
+            background-color: #e6f7f7;
+        }
+        th {
+            background-color: #d9f2f2;
+            font-weight: 600;
+            color: #003366;
+        }
+        td:first-child, th:first-child {
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
+        td:last-child, th:last-child {
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
         }
     </style>
 </head>
@@ -65,30 +81,33 @@
     Adquirir responsabilidades que permitan desarrollar mis habilidades, adquirir mayores conocimientos y poder desempeñarme con excelencia profesional.
 
     <u><h4>EDUCACION</h4></u>
-    <div class="cuadro">
-        <table>
-            <tr>
-                <td><strong><p align="center">Centro Educativo</strong></td>
-                <td><strong><p align="center">Diploma/Certificado</strong></td>
-                <td>Licenciatura en Electrónica y Sistemas de Comunicación</td>
-            </tr>
-            <tr>
-                <td>Universidad Tecnológica de Panamá</td>
-                <td>Técnico en Ingeniería Con Especialización en Electrónica y Sistemas de Comunicación</td>
-            </tr>
-            <tr>
-                <td>Universidad Tecnológica de Panamá</td>
-                <td>Licenciatura en Desarrollo y Gestión de Software (En curso)</td>
-            </tr>
-            <tr>
-                <td>Universidad Latina de Panamá</td>
-                <td>Maestría en Gerencia Informática con Énfasis en Seguridad Computacional</td>
-            </tr>
-            <tr>
-                <td>Cisco Networking Academy</td>
-                <td>CCNA Routing  and switching</td>
-            </tr>
-        </table>
+    <table>
+        <tr>
+            <th><p align="center">Centro Educativo</th>
+            <th><p align="center">Diploma/Certificado</th>
+            <th><p align="center">Especialización</th>
+        </tr>
+        <tr>
+            <td>Universidad Tecnológica de Panamá</td>
+            <td>Licenciatura en Electrónica y Sistemas de Comunicación</td>
+            <td>Técnico en Ingeniería Con Especialización en Electrónica y Sistemas de Comunicación</td>
+        </tr>
+        <tr>
+            <td>Universidad Tecnológica de Panamá</td>
+            <td>Licenciatura en Desarrollo y Gestión de Software (En curso)</td>
+            <td>Licenciatura en Desarrollo y Gestión de Software (En curso)</td>
+        </tr>
+        <tr>
+            <td>Universidad Latina de Panamá</td>
+            <td>Maestría en Gerencia Informática con Énfasis en Seguridad Computacional</td>
+            <td>Maestría en Gerencia Informática con Énfasis en Seguridad Computacional</td>
+        </tr>
+        <tr>
+            <td>Cisco Networking Academy</td>
+            <td>CCNA Routing  and switching</td>
+            <td>CCNA Routing  and switching</td>
+        </tr>
+    </table>
     </div>
     <form>
         <input type="button" onclick="mostrar('Diploma de Licenciatura')" value="mostrar/ocultar Diploma de Licenciatura">
@@ -221,34 +240,33 @@
         </ul>
     </div>
 
- <u><h4>REFERENCIAS LABORALES</h4></u>
-    <div class="cuadro">
-        <table>
-            <tr>
-                <td><strong><p align="center">Empresa</strong></td>
-                <td><strong><p align="center">Referencia</strong></td>
-                <td><strong><p align="center">Contacto</strong></td>
-                <td><strong><p align="center">Cargo</strong></td>
-            </tr>
-            <tr>
-                <td>Network Solution S.A.</td>
-                <td>Kadir Salvatierra</td>
-                <td>6678-6277</td>
-                <td>Soporte Técnico</td>
-            </tr>
-            <tr>
-                <td>Cable Onda S.A.</td>
-                <td>Laura Rosas</td>
-                <td>6400-7833</td>
-                <td>Gerente de Operaciones de Datos y Entrega de Servicios</td>
-            </tr>
-            <tr>
-                <td>Telered S.A.</td>
-                <td>Ulises Bosquez</td>
-                <td>6670-0416</td>
-                <td>Supervisor de Operaciones</td>
-            </tr>
-        </table>
+<u><h4>REFERENCIAS LABORALES</h4></u>
+    <table>
+        <tr>
+            <th><p align="center">Empresa</th>
+            <th><p align="center">Referencia</th>
+            <th><p align="center">Contacto</th>
+            <th><p align="center">Cargo</th>
+        </tr>
+        <tr>
+            <td>Network Solution S.A.</td>
+            <td>Kadir Salvatierra</td>
+            <td>6678-6277</td>
+            <td>Soporte Técnico</td>
+        </tr>
+        <tr>
+            <td>Cable Onda S.A.</td>
+            <td>Laura Rosas</td>
+            <td>6400-7833</td>
+            <td>Gerente de Operaciones de Datos y Entrega de Servicios</td>
+        </tr>
+        <tr>
+            <td>Telered S.A.</td>
+            <td>Ulises Bosquez</td>
+            <td>6670-0416</td>
+            <td>Supervisor de Operaciones</td>
+        </tr>
+    </table>
     </div>
 
     <u><h4>REFERENCIAS PERSONALES</h4></u>
