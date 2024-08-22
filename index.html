@@ -22,18 +22,27 @@
         .oculto {
             display: none;
         }
-        .experiencia-laboral {
+        .experiencia-laboral, .cuadro {
             background-color: #e6f7f7;
             padding: 15px;
             border-radius: 10px;
             margin-bottom: 20px;
             border: 1px solid #b3d9d9;
         }
-        .experiencia-laboral h4 {
+        .experiencia-laboral h4, .cuadro h4 {
             color: #003366;
         }
         .experiencia-laboral ul {
             margin-left: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: none;
+            padding: 10px;
+            text-align: left;
         }
     </style>
 </head>
@@ -56,32 +65,31 @@
     Adquirir responsabilidades que permitan desarrollar mis habilidades, adquirir mayores conocimientos y poder desempeñarme con excelencia profesional.
 
     <u><h4>EDUCACION</h4></u>
-    <table border=5>
-        <tr>
-            <td><strong><p align="center">Centro Educativo</strong></td>
-            <td><strong><p align="center">Diploma/Certificado</strong></td>
-        </tr>
-        <tr>
-            <td>Universidad Tecnológica de Panamá</td>
-            <td>Licenciatura en Electrónica y Sistemas de Comunicación</td>
-        </tr>
-        <tr>
-            <td>Universidad Tecnológica de Panamá</td>
-            <td>Técnico en Ingeniería Con Especialización en Electrónica y Sistemas de Comunicación</td>
-        </tr>
-        <tr>
-            <td>Universidad Tecnológica de Panamá</td>
-            <td>Licenciatura en Desarrollo y Gestión de Software (En curso)</td>
-        </tr>
-        <tr>
-            <td>Universidad Latina de Panamá</td>
-            <td>Maestría en Gerencia Informática con Énfasis en Seguridad Computacional</td>
-        </tr>
-        <tr>
-            <td>Cisco Networking Academy</td>
-            <td>CCNA Routing  and switching</td>
-        </tr>
-    </table>
+    <div class="cuadro">
+        <table>
+            <tr>
+                <td><strong><p align="center">Centro Educativo</strong></td>
+                <td><strong><p align="center">Diploma/Certificado</strong></td>
+                <td>Licenciatura en Electrónica y Sistemas de Comunicación</td>
+            </tr>
+            <tr>
+                <td>Universidad Tecnológica de Panamá</td>
+                <td>Técnico en Ingeniería Con Especialización en Electrónica y Sistemas de Comunicación</td>
+            </tr>
+            <tr>
+                <td>Universidad Tecnológica de Panamá</td>
+                <td>Licenciatura en Desarrollo y Gestión de Software (En curso)</td>
+            </tr>
+            <tr>
+                <td>Universidad Latina de Panamá</td>
+                <td>Maestría en Gerencia Informática con Énfasis en Seguridad Computacional</td>
+            </tr>
+            <tr>
+                <td>Cisco Networking Academy</td>
+                <td>CCNA Routing  and switching</td>
+            </tr>
+        </table>
+    </div>
     <form>
         <input type="button" onclick="mostrar('Diploma de Licenciatura')" value="mostrar/ocultar Diploma de Licenciatura">
         <img src="Licenciatura" height="519" width="662" class="oculto" id="Diploma de Licenciatura">
@@ -213,33 +221,35 @@
         </ul>
     </div>
 
-    <u><h4>REFERENCIAS LABORALES</h4></u>
-    <table border=5>
-        <tr>
-            <td><strong><p align="center">Empresa</strong></td>
-            <td><strong><p align="center">Referencia</strong></td>
-            <td><strong><p align="center">Contacto</strong></td>
-            <td><strong><p align="center">Cargo</strong></td>
-        </tr>
-        <tr>
-            <td>Network Solution S.A.</td>
-            <td>Kadir Salvatierra</td>
-            <td>6678-6277</td>
-            <td>Soporte Técnico</td>
-        </tr>
-        <tr>
-            <td>Cable Onda S.A.</td>
-            <td>Laura Rosas</td>
-            <td>6400-7833</td>
-            <td>Gerente de Operaciones de Datos y Entrega de Servicios</td>
-        </tr>
-        <tr>
-            <td>Telered S.A.</td>
-            <td>Ulises Bosquez</td>
-            <td>6670-0416</td>
-            <td>Supervisor de Operaciones</td>
-        </tr>
-    </table>
+ <u><h4>REFERENCIAS LABORALES</h4></u>
+    <div class="cuadro">
+        <table>
+            <tr>
+                <td><strong><p align="center">Empresa</strong></td>
+                <td><strong><p align="center">Referencia</strong></td>
+                <td><strong><p align="center">Contacto</strong></td>
+                <td><strong><p align="center">Cargo</strong></td>
+            </tr>
+            <tr>
+                <td>Network Solution S.A.</td>
+                <td>Kadir Salvatierra</td>
+                <td>6678-6277</td>
+                <td>Soporte Técnico</td>
+            </tr>
+            <tr>
+                <td>Cable Onda S.A.</td>
+                <td>Laura Rosas</td>
+                <td>6400-7833</td>
+                <td>Gerente de Operaciones de Datos y Entrega de Servicios</td>
+            </tr>
+            <tr>
+                <td>Telered S.A.</td>
+                <td>Ulises Bosquez</td>
+                <td>6670-0416</td>
+                <td>Supervisor de Operaciones</td>
+            </tr>
+        </table>
+    </div>
 
     <u><h4>REFERENCIAS PERSONALES</h4></u>
     <li>Disponibles a petición.</li>
