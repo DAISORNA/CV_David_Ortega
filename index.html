@@ -211,40 +211,6 @@
         font-size: 13px;
       }
 
-      .toggle-row {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        margin: 10px 0 6px;
-      }
-
-      .toggle {
-        appearance: none;
-        border: 1px solid var(--line);
-        background: rgba(255, 255, 255, 0.85);
-        border-radius: 12px;
-        padding: 8px 10px;
-        cursor: pointer;
-        font-weight: 600;
-        font-size: 13px;
-      }
-      .toggle[aria-expanded="true"] {
-        border-color: rgba(15, 118, 110, 0.35);
-        background: rgba(15, 118, 110, 0.08);
-      }
-
-      .diploma {
-        display: none;
-        margin-top: 10px;
-      }
-      .diploma img {
-        width: 100%;
-        height: auto;
-        border: 1px solid var(--line);
-        border-radius: 14px;
-        background: #ffffff;
-      }
-
       .muted { color: var(--muted); }
 
       @media (max-width: 860px) {
@@ -278,30 +244,8 @@
         .grid { grid-template-columns: 1fr; }
         section { break-inside: avoid-page; }
         .role { break-inside: avoid-page; }
-        .diploma { break-inside: avoid-page; }
       }
     </style>
-
-    <script>
-      function toggleById(id, btn) {
-        var el = document.getElementById(id);
-        if (!el) return;
-
-        var isOpen = el.style.display === "block";
-        el.style.display = isOpen ? "none" : "block";
-        btn.setAttribute("aria-expanded", String(!isOpen));
-      }
-
-      window.addEventListener("DOMContentLoaded", function () {
-        var buttons = document.querySelectorAll("button[data-target]");
-        buttons.forEach(function (btn) {
-          btn.setAttribute("aria-expanded", "false");
-          btn.addEventListener("click", function () {
-            toggleById(btn.getAttribute("data-target"), btn);
-          });
-        });
-      });
-    </script>
   </head>
 
   <body>
@@ -456,29 +400,7 @@
                   <li>Universidad Tecnológica de Panamá - Licenciatura en Desarrollo y Gestión de Software (en curso)</li>
                 </ul>
 
-                <div class="toggle-row no-print" aria-label="Diplomas y certificados">
-                  <button class="toggle" type="button" data-target="diploma-lic">Diploma de Licenciatura</button>
-                  <button class="toggle" type="button" data-target="diploma-tec">Diploma de Técnico</button>
-                  <button class="toggle" type="button" data-target="diploma-mae">Diploma de Maestría</button>
-                  <button class="toggle" type="button" data-target="cert-ccna">Certificado CCNA</button>
-                  <button class="toggle" type="button" data-target="idoneidad-tec">Idoneidad de Técnico</button>
-                </div>
-
-                <div class="diploma" id="diploma-lic">
-                  <img src="Licenciatura.png" alt="Diploma de Licenciatura" />
-                </div>
-                <div class="diploma" id="diploma-tec">
-                  <img src="Tecnico.png" alt="Diploma de Técnico" />
-                </div>
-                <div class="diploma" id="diploma-mae">
-                  <img src="Maestria.png" alt="Diploma de Maestría" />
-                </div>
-                <div class="diploma" id="cert-ccna">
-                  <img src="CCNA.png" alt="Certificado CCNA" />
-                </div>
-                <div class="diploma" id="idoneidad-tec">
-                  <img src="Idoneidad.png" alt="Idoneidad de Técnico" />
-                </div>
+                <p class="muted" style="margin-top: 10px">Documentacion de diplomas y certificaciones disponible bajo solicitud.</p>
               </section>
 
               <section>
