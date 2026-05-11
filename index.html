@@ -24,14 +24,44 @@
           radial-gradient(820px 460px at 95% 0%, rgba(14, 116, 144, 0.1), transparent 50%),
           #f7fafc;
       }
-      main {
+      .page {
         max-width: 980px;
         margin: 24px auto;
-        padding: 24px;
+        padding: 0 16px 24px;
+      }
+      .card {
         background: var(--paper);
         border: 1px solid var(--line);
         border-radius: 16px;
         box-shadow: 0 16px 40px rgba(2, 6, 23, 0.09);
+        overflow: hidden;
+      }
+      .topbar {
+        display: flex;
+        justify-content: flex-end;
+        gap: 10px;
+        padding: 12px 14px;
+        border-bottom: 1px solid var(--line);
+        background: linear-gradient(180deg, rgba(241, 245, 249, 0.92), rgba(255, 255, 255, 0.84));
+      }
+      .btn {
+        appearance: none;
+        border: 1px solid var(--line);
+        background: #ffffff;
+        border-radius: 999px;
+        padding: 8px 12px;
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--ink);
+        text-decoration: none;
+        cursor: pointer;
+      }
+      .btn-primary {
+        border-color: rgba(15, 118, 110, 0.35);
+        background: rgba(15, 118, 110, 0.1);
+      }
+      main {
+        padding: 24px;
       }
       h1, h2, h3 {
         margin: 0 0 8px;
@@ -61,6 +91,25 @@
       header {
         border-bottom: 1px solid var(--line);
         padding-bottom: 14px;
+      }
+      .header-grid {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 16px;
+        align-items: start;
+      }
+      .headline {
+        margin-top: 4px;
+        color: var(--muted);
+        font-weight: 600;
+      }
+      .contact {
+        display: grid;
+        gap: 4px;
+        justify-items: end;
+      }
+      .contact p {
+        margin: 0;
       }
       section {
         margin-top: 14px;
@@ -101,12 +150,24 @@
         margin-bottom: 4px;
       }
       @media (max-width: 760px) {
+        .header-grid {
+          grid-template-columns: 1fr;
+        }
+        .contact {
+          justify-items: start;
+        }
         main {
           margin: 0;
           border-radius: 0;
+          padding: 16px;
+        }
+        .page {
+          padding: 0;
+        }
+        .card {
+          border-radius: 0;
           border-left: none;
           border-right: none;
-          padding: 16px;
         }
       }
       @media print {
@@ -116,6 +177,19 @@
         body {
           background: #fff;
           margin: 0;
+        }
+        .page {
+          margin: 0;
+          padding: 0;
+          max-width: none;
+        }
+        .card {
+          border: none;
+          border-radius: 0;
+          box-shadow: none;
+        }
+        .topbar {
+          display: none;
         }
         main {
           margin: 0;
@@ -179,18 +253,35 @@
   </head>
 
   <body>
-    <main>
-      <header>
-        <h1>David Isaac Ortega Navarro</h1>
-        <p><strong>Hoja de Vida</strong></p>
-        <div class="meta">
-          <p><span class="plain-label">Telefono:</span> +507 6679-3944</p>
-          <p><span class="plain-label">Correo:</span> dortegana@hotmail.com</p>
-          <p><span class="plain-label">GitHub:</span> github.com/DAISORNA</p>
-          <p><span class="plain-label">Ubicacion:</span> Panama</p>
-          <p><span class="plain-label">Especialidad:</span> Operaciones y mantenimiento en sistemas criticos ferroviarios y telecomunicaciones</p>
+    <div class="page">
+      <div class="card">
+        <div class="topbar">
+          <button class="btn btn-primary" type="button" onclick="window.print()">Imprimir / Guardar PDF</button>
+          <a class="btn" href="https://github.com/DAISORNA/CV_David_Ortega" target="_blank" rel="noreferrer">Ver en GitHub</a>
         </div>
-      </header>
+        <main>
+          <header>
+            <div class="header-grid">
+              <div>
+                <h1>David Isaac Ortega Navarro</h1>
+                <p><strong>Hoja de Vida</strong></p>
+                <p class="headline">Sistemas ferroviarios y telecomunicaciones | Operaciones | Desarrollo de software</p>
+                <p>
+                  Profesional con más de 12 años de experiencia en operaciones, monitoreo y gestión de incidencias en entornos tecnológicos críticos, incluyendo telecomunicaciones, redes corporativas, infraestructura TI, sistemas ferroviarios, hardware industrial y plataformas de software.
+                  Experiencia en soporte y administración de redes, equipos de comunicación, servidores, sistemas eléctricos y plataformas tecnológicas críticas, así como en análisis, resolución de fallas y continuidad operativa.
+                  Enfocado en la seguridad, estabilidad y documentación técnica de los sistemas, con capacidad para coordinar incidentes y garantizar la disponibilidad de servicios críticos.
+                  Combino experiencia en infraestructura y hardware con formación activa en desarrollo de software, automatización, ciberseguridad e inteligencia artificial aplicada a procesos tecnológicos.
+                </p>
+              </div>
+              <div class="contact meta">
+                <p><span class="plain-label">Telefono:</span> +507 6679-3944</p>
+                <p><span class="plain-label">Correo:</span> dortegana@hotmail.com</p>
+                <p><span class="plain-label">GitHub:</span> github.com/DAISORNA</p>
+                <p><span class="plain-label">Ubicacion:</span> Panama</p>
+                <p><span class="plain-label">Especialidad:</span> Operaciones y mantenimiento en sistemas criticos ferroviarios y telecomunicaciones</p>
+              </div>
+            </div>
+          </header>
 
       <section>
         <h2>Resumen Profesional</h2>
@@ -359,6 +450,8 @@
         <h2>Referencias</h2>
         <p>Disponibles a solicitud.</p>
       </section>
-    </main>
+        </main>
+      </div>
+    </div>
   </body>
 </html>
