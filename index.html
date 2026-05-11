@@ -3,503 +3,284 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="color-scheme" content="light" />
-    <title>David Isaac Ortega Navarro - Hoja de Vida</title>
-
+    <title>David Isaac Ortega Navarro - Hoja de Vida ATS</title>
+    <meta name="description" content="Hoja de vida en formato ATS de David Isaac Ortega Navarro" />
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap');
-
-      :root {
-        --paper: #ffffff;
-        --ink: #0f172a;
-        --muted: #475569;
-        --line: #e2e8f0;
-        --wash: #f1f5f9;
-        --accent: #0f766e;
-        --accent-2: #1d4ed8;
-        --shadow: 0 18px 45px rgba(2, 6, 23, 0.12);
-
-        --serif: "Source Serif 4", "Georgia", "Times New Roman", serif;
-        --sans: "Source Sans 3", ui-sans-serif, system-ui, -apple-system, "Segoe UI", "Roboto", "Helvetica", "Arial", sans-serif;
-      }
-
-      * { box-sizing: border-box; }
-      html, body { height: 100%; }
       body {
-        margin: 0;
-        color: var(--ink);
-        font-family: var(--sans);
+        margin: 24px;
+        font-family: Arial, Calibri, sans-serif;
+        color: #111;
         line-height: 1.45;
-        background:
-          radial-gradient(900px 500px at 15% 10%, rgba(15, 118, 110, 0.16), transparent 55%),
-          radial-gradient(900px 500px at 95% 0%, rgba(29, 78, 216, 0.13), transparent 55%),
-          linear-gradient(180deg, #edf7f6 0%, #f7fbff 40%, #ffffff 100%);
+        background: #fff;
       }
-
-      a { color: inherit; text-decoration: none; }
-      a:hover { text-decoration: underline; }
-
-      .page {
-        max-width: 980px;
-        margin: 28px auto;
-        padding: 0 18px 28px;
-      }
-
-      .card {
-        background: var(--paper);
-        border: 1px solid var(--line);
-        border-radius: 18px;
-        box-shadow: var(--shadow);
-        overflow: hidden;
-      }
-
-      .topbar {
-        display: flex;
-        justify-content: flex-end;
-        gap: 10px;
-        padding: 12px 14px;
-        border-bottom: 1px solid var(--line);
-        background: linear-gradient(180deg, rgba(241, 245, 249, 0.9), rgba(255, 255, 255, 0.75));
-      }
-
-      .btn {
-        appearance: none;
-        border: 1px solid var(--line);
-        background: #ffffff;
-        border-radius: 999px;
-        padding: 8px 12px;
-        font-weight: 600;
-        font-size: 13px;
-        cursor: pointer;
-      }
-      .btn:hover { border-color: #cbd5e1; }
-      .btn-primary {
-        border-color: rgba(15, 118, 110, 0.35);
-        background: rgba(15, 118, 110, 0.08);
-      }
-
-      header {
-        padding: 22px 22px 16px;
-        border-bottom: 1px solid var(--line);
-      }
-
-      .header-grid {
-        display: grid;
-        grid-template-columns: 1.2fr 0.8fr;
-        gap: 18px;
-        align-items: start;
-      }
-
-      .name {
-        font-family: var(--serif);
-        font-size: 34px;
-        line-height: 1.1;
-        margin: 0;
-        letter-spacing: -0.02em;
-      }
-
-      .headline {
-        margin: 10px 0 0;
-        color: var(--muted);
-        font-weight: 600;
-      }
-
-      .contact {
-        display: grid;
-        gap: 6px;
-        justify-items: end;
-      }
-      .contact small {
-        color: var(--muted);
-      }
-
-      .id-strip {
-        display: flex;
-        gap: 10px;
-        align-items: center;
-        justify-content: flex-end;
-        margin-top: 10px;
-      }
-
-      .avatar {
-        width: 88px;
-        height: 88px;
-        border-radius: 16px;
-        object-fit: cover;
-        border: 1px solid var(--line);
-      }
-
-      .qr {
-        width: 56px;
-        height: 56px;
-        border-radius: 12px;
-        border: 1px solid var(--line);
-        object-fit: cover;
-      }
-
       main {
-        padding: 18px 22px 24px;
+        max-width: 980px;
+        margin: 0 auto;
       }
-
-      .grid {
-        display: grid;
-        grid-template-columns: 1fr 0.55fr;
-        gap: 18px;
+      h1, h2, h3 {
+        margin: 0 0 8px;
       }
-
-      section {
-        padding: 14px 14px 12px;
-        border: 1px solid var(--line);
-        border-radius: 16px;
-        background: linear-gradient(180deg, rgba(241, 245, 249, 0.7), rgba(255, 255, 255, 0.6));
+      h1 {
+        font-size: 28px;
       }
-
-      section h2 {
-        margin: 0 0 10px;
-        font-family: var(--serif);
+      h2 {
+        margin-top: 20px;
+        font-size: 20px;
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 4px;
+      }
+      h3 {
+        margin-top: 14px;
         font-size: 16px;
-        letter-spacing: 0.02em;
-        text-transform: uppercase;
-        color: #0b1220;
       }
-
-      p { margin: 0 0 10px; }
-      ul { margin: 0; padding-left: 18px; }
-      li { margin: 6px 0; }
-
-      .pill-row {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 8px;
-        margin-top: 8px;
+      p {
+        margin: 0 0 10px;
       }
-      .pill {
-        display: inline-flex;
-        align-items: center;
-        padding: 6px 10px;
-        border-radius: 999px;
-        border: 1px solid var(--line);
-        background: rgba(255, 255, 255, 0.7);
-        font-size: 13px;
-        color: #0b1220;
+      ul {
+        margin: 0 0 10px 20px;
       }
-      .pill strong { font-weight: 700; }
-
+      .meta p {
+        margin: 2px 0;
+      }
       .role {
-        padding: 12px;
-        border: 1px solid var(--line);
-        border-radius: 14px;
-        background: rgba(255, 255, 255, 0.75);
         margin-bottom: 12px;
       }
-      .role:last-child { margin-bottom: 0; }
-
-      .role-top {
-        display: flex;
-        gap: 10px;
-        justify-content: space-between;
-        align-items: baseline;
-        flex-wrap: wrap;
-        margin-bottom: 6px;
-      }
-      .role-title {
+      .plain-label {
         font-weight: 700;
       }
-      .role-meta {
-        color: var(--muted);
-        font-weight: 600;
-        font-size: 13px;
-      }
-
-      .muted { color: var(--muted); }
-
-      @media (max-width: 860px) {
-        .header-grid { grid-template-columns: 1fr; }
-        .contact { justify-items: start; }
-        .id-strip { justify-content: flex-start; }
-        .grid { grid-template-columns: 1fr; }
-      }
-
       @media print {
-        @page { margin: 14mm 12mm; }
-
+        @page {
+          margin: 12mm;
+        }
         body {
-          background: #ffffff !important;
-          -webkit-print-color-adjust: exact;
-          print-color-adjust: exact;
+          margin: 0;
         }
-
-        .page { margin: 0; padding: 0; max-width: none; }
-        .card { box-shadow: none; border-radius: 0; border: none; }
-        .topbar { display: none !important; }
-        .no-print { display: none !important; }
-
-        section, header, .role {
-          background: #ffffff !important;
-          border-color: #cbd5e1 !important;
-        }
-
-        a { text-decoration: none; }
-
-        .grid { grid-template-columns: 1fr; }
-        section { break-inside: avoid-page; }
-        .role { break-inside: avoid-page; }
       }
     </style>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "David Isaac Ortega Navarro",
+        "telephone": "+50766793944",
+        "email": "dortegana@hotmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "Panama"
+        },
+        "url": "https://github.com/DAISORNA",
+        "sameAs": ["https://github.com/DAISORNA"],
+        "jobTitle": "Especialista en operaciones, mantenimiento y sistemas tecnologicos criticos",
+        "knowsAbout": [
+          "CBTC",
+          "SCADA",
+          "PLC",
+          "Mantenimiento preventivo",
+          "Mantenimiento correctivo",
+          "Infraestructura TI",
+          "Redes corporativas",
+          "Fibra optica",
+          "Switching",
+          "Routing",
+          "Troubleshooting",
+          "Gestion de incidencias",
+          "Java",
+          "JavaScript",
+          "Python",
+          "C#",
+          "Kotlin",
+          "PostgreSQL",
+          "SQL Server",
+          "Oracle",
+          "Secure SDLC",
+          "Inteligencia artificial aplicada"
+        ],
+        "alumniOf": [
+          "Universidad Latina de Panama",
+          "Universidad Tecnologica de Panama"
+        ]
+      }
+    </script>
   </head>
 
   <body>
-    <div class="page">
-      <div class="card">
-        <div class="topbar no-print">
-          <button class="btn btn-primary" type="button" onclick="window.print()">Imprimir / Guardar PDF</button>
-          <a class="btn" href="https://github.com/DAISORNA/CV_David_Ortega" target="_blank" rel="noreferrer">Ver en GitHub</a>
+    <main>
+      <header>
+        <h1>David Isaac Ortega Navarro</h1>
+        <p><strong>Hoja de Vida - Formato ATS (estricto)</strong></p>
+        <div class="meta">
+          <p><span class="plain-label">Telefono:</span> +507 6679-3944</p>
+          <p><span class="plain-label">Correo:</span> dortegana@hotmail.com</p>
+          <p><span class="plain-label">GitHub:</span> github.com/DAISORNA</p>
+          <p><span class="plain-label">Ubicacion:</span> Panama</p>
+          <p><span class="plain-label">Especialidad:</span> Operaciones y mantenimiento en sistemas criticos ferroviarios y telecomunicaciones</p>
         </div>
+      </header>
 
-        <header>
-          <div class="header-grid">
-            <div>
-              <h1 class="name">David Isaac Ortega Navarro</h1>
-              <p class="headline">Sistemas ferroviarios y telecom | Operaciones | Desarrollo de software e IA</p>
-              <p class="muted">
-                Profesional con experiencia en mantenimiento, operación y puesta en marcha de sistemas críticos (CBTC, energía, material rodante y redes). Actualmente curso 4.º año de la Licenciatura en Desarrollo y Gestión de Software, con enfoque en proyectos académicos y personales, trabajo colaborativo, control de versiones, bases de datos y seguridad a lo largo del ciclo de desarrollo de software (Secure SDLC). Buen manejo de herramientas de Inteligencia Artificial (IA) para desarrollar software, acelerar el análisis, prototipado y automatización.
-              </p>
+      <section>
+        <h2>Resumen Profesional</h2>
+        <p>
+          Profesional con mas de 12 anos de experiencia en operaciones, monitoreo y gestion de incidencias en entornos tecnologicos criticos, incluyendo telecomunicaciones, redes corporativas, infraestructura TI, sistemas ferroviarios, hardware industrial y plataformas de software.
+          Experiencia en soporte y administracion de redes, equipos de comunicacion, servidores, sistemas electricos y plataformas tecnologicas criticas, asi como en analisis, resolucion de fallas y continuidad operativa.
+          Enfocado en la seguridad, estabilidad y documentacion tecnica de los sistemas, con capacidad para coordinar incidentes y garantizar la disponibilidad de servicios criticos.
+          Combino experiencia en infraestructura y hardware con formacion activa en desarrollo de software, automatizacion, ciberseguridad e inteligencia artificial aplicada a procesos tecnologicos.
+        </p>
+      </section>
 
-              <div class="pill-row">
-                <span class="pill"><strong>Especialidad:</strong>&nbsp;Operaciones / Mantenimiento</span>
-                <span class="pill"><strong>Sector:</strong>&nbsp;Ferroviario y telecom</span>
-                <span class="pill"><strong>Enfoque:</strong>&nbsp;Calidad / seguridad / tiempos</span>
-                <span class="pill"><strong>Software:</strong>&nbsp;Aplicaciones / datos</span>
-              </div>
-            </div>
+      <section>
+        <h2>Experiencia Profesional</h2>
 
-            <div class="contact">
-              <div><strong>Contacto</strong></div>
-              <small><a href="tel:+50766793944">+507 6679-3944</a></small>
-              <small><a href="mailto:dortegana@hotmail.com">dortegana@hotmail.com</a></small>
-              <small><a href="https://github.com/DAISORNA" target="_blank" rel="noreferrer">github.com/DAISORNA</a></small>
-              <small class="muted">Panamá</small>
-              <div class="id-strip">
-                <img class="qr" src="qr.jpg" alt="QR" />
-                <img class="avatar" src="profile.png" alt="Foto" />
-              </div>
-            </div>
-          </div>
-        </header>
+        <article class="role">
+          <h3>Tecnico de Senalizacion (CBTC) - ALSTOM Panama</h3>
+          <p><strong>Fecha:</strong> Feb 2024 - Presente</p>
+          <ul>
+            <li>Ejecucion de mantenimiento preventivo y correctivo en sistemas CBTC, garantizando la continuidad operativa y disponibilidad de plataformas criticas ferroviarias.</li>
+            <li>Monitoreo, analisis y seguimiento de incidentes y averias, aplicando estandares de calidad y seguridad.</li>
+            <li>Administracion y soporte de infraestructura de comunicaciones entre trenes y centro de control, incluyendo redes de fibra optica, switches, antenas, servidores y sistemas SCADA.</li>
+            <li>Gestion de entornos de comunicacion segura y soporte a sistemas tecnologicos ferroviarios de mision critica.</li>
+          </ul>
+        </article>
 
-        <main>
-          <div class="grid">
-            <div>
-              <section>
-                <h2>Experiencia</h2>
+        <article class="role">
+          <h3>Tecnico de Energia - ALSTOM Panama</h3>
+          <p><strong>Fecha:</strong> Ene 2022 - Feb 2024</p>
+          <ul>
+            <li>Ejecucion de mantenimiento preventivo y correctivo en sistemas electricos de media y baja tension para subestaciones y gabinetes electricos de la Linea 2 del Metro de Panama.</li>
+            <li>Diagnostico y analisis de fallas electricas, implementando acciones correctivas para garantizar la continuidad operativa del servicio.</li>
+            <li>Experiencia en operacion, monitoreo y verificacion de disyuntores, reles de proteccion, PLC, sistemas SCADA y equipos electricos industriales.</li>
+            <li>Realizacion de pruebas electricas y pruebas de aislamiento en transformadores de subestaciones de traccion, estaciones de pasajeros y acometidas de potencia, cumpliendo estandares de seguridad, confiabilidad y disponibilidad operacional.</li>
+          </ul>
+        </article>
 
-                <div class="role">
-                  <div class="role-top">
-                    <div class="role-title">Técnico de Señalización (CBTC) - ALSTOM Panamá</div>
-                    <div class="role-meta">Feb 2024 - Presente</div>
-                  </div>
-                  <ul>
-                    <li>Ejecuta mantenimiento correctivo y preventivo en sistemas CBTC (equipos embarcados y fijos).</li>
-                    <li>Registra, controla y da seguimiento a averías de trenes y del sistema, priorizando la continuidad operativa.</li>
-                    <li>Asegura cumplimiento de estándares de calidad, seguridad y tiempos establecidos.</li>
-                  </ul>
-                </div>
+        <article class="role">
+          <h3>Tecnico de Material Rodante - ALSTOM Panama</h3>
+          <p><strong>Fecha:</strong> Dic 2019 - Dic 2022</p>
+          <ul>
+            <li>Ejecucion de mantenimiento preventivo y correctivo en trenes y sistemas de material rodante del Metro de Panama, garantizando la disponibilidad y continuidad operativa de los equipos.</li>
+            <li>Diagnostico, analisis y resolucion de averias tecnicas, incluyendo elaboracion de informes de investigacion y analisis de causa raiz.</li>
+            <li>Monitoreo y seguimiento de fallas recurrentes, proponiendo mejoras y lineas de investigacion para optimizar el rendimiento y confiabilidad de los sistemas ferroviarios.</li>
+            <li>Experiencia en analisis de registros y software de mantenimiento de equipos a bordo, contribuyendo a la optimizacion de procesos de mantenimiento y gestion de incidencias tecnicas.</li>
+          </ul>
+        </article>
 
-                <div class="role">
-                  <div class="role-top">
-                    <div class="role-title">Técnico de Energía - ALSTOM Panamá</div>
-                    <div class="role-meta">Ene 2022 - Feb 2024</div>
-                  </div>
-                  <ul>
-                    <li>Mantenimiento del suministro eléctrico en subestaciones y gabinetes eléctricos.</li>
-                    <li>Análisis de fallas y ejecución de acciones correctivas para restablecer el servicio en la línea 2 del Metro de Panamá.</li>
-                    <li>Contribución a procesos, métodos y herramientas para estandarizar la ejecución del mantenimiento.</li>
-                  </ul>
-                </div>
+        <article class="role">
+          <h3>Ingeniero de Pruebas y Puesta en Marcha - ALSTOM Panama</h3>
+          <p><strong>Fecha:</strong> Jun 2018 - Dic 2019</p>
+          <ul>
+            <li>Planificacion, coordinacion y ejecucion de pruebas para subsistemas ferroviarios (senalizacion, comunicacion, energia, material rodante, catenaria).</li>
+            <li>Produccion y ejecucion de planes de pruebas; coordinacion de recursos y participantes en sitio.</li>
+            <li>Gestion de planes de accion ante mal funcionamiento para alcanzar objetivos contractuales.</li>
+          </ul>
+        </article>
 
-                <div class="role">
-                  <div class="role-top">
-                    <div class="role-title">Técnico de Material Rodante - ALSTOM Panamá</div>
-                    <div class="role-meta">Dic 2019 - Dic 2022</div>
-                  </div>
-                  <ul>
-                    <li>Mantenimientos correctivos y preventivos sobre coches del metro.</li>
-                    <li>Análisis y resolución de averías; elaboración de reportes de investigación cuando aplica.</li>
-                    <li>Seguimiento de problemas repetitivos y propuesta de líneas de investigación para su resolución.</li>
-                    <li>Análisis de registros de software de mantenimiento para identificar oportunidades de mejora.</li>
-                  </ul>
-                </div>
+        <article class="role">
+          <h3>Operador de Redes Electronicas (NOC) - Telered, Panama</h3>
+          <p><strong>Fecha:</strong> Abr 2017 - Jun 2018</p>
+          <ul>
+            <li>Monitoreo y aseguramiento de disponibilidad de servicios Clave y Clave Pago a nivel nacional.</li>
+            <li>Seguimiento de procesos de intercambio de transacciones ACH en horarios establecidos.</li>
+            <li>Coordinacion de incidencias con proveedor internacional (ATH) durante procesos nocturnos locales y regionales.</li>
+          </ul>
+        </article>
 
-                <div class="role">
-                  <div class="role-top">
-                    <div class="role-title">Ingeniero de Pruebas y Puesta en Marcha - ALSTOM Panamá</div>
-                    <div class="role-meta">Jun 2018 - Dic 2019</div>
-                  </div>
-                  <ul>
-                    <li>Planificación, coordinación y ejecución de pruebas para subsistemas ferroviarios (señalización, comunicación, energía, material rodante, catenaria).</li>
-                    <li>Producción y ejecución de planes de pruebas; coordinación de recursos y participantes en sitio.</li>
-                    <li>Gestión de planes de acción ante mal funcionamiento para alcanzar objetivos contractuales.</li>
-                  </ul>
-                </div>
+        <article class="role">
+          <h3>Ingeniero en Operaciones de Datos y Entrega de Servicios - Cable Onda</h3>
+          <p><strong>Fecha:</strong> Mar 2015 - Mar 2017</p>
+          <ul>
+            <li>Administracion, aprovisionamiento y soporte de infraestructura de red.</li>
+            <li>Configuracion y troubleshooting de servicios (P2P, Internet, VRF, BGP).</li>
+            <li>Atencion de incidentes escalados y documentacion tecnica (actividades, diagramas y reportes).</li>
+          </ul>
+        </article>
 
-                <div class="role">
-                  <div class="role-top">
-                    <div class="role-title">Operador de Redes Electrónicas (NOC) - Telered, Panamá</div>
-                    <div class="role-meta">Abr 2017 - Jun 2018</div>
-                  </div>
-                  <ul>
-                    <li>Monitoreo y aseguramiento de disponibilidad de servicios Clave y Clave Pago a nivel nacional.</li>
-                    <li>Seguimiento de procesos de intercambio de transacciones ACH en horarios establecidos.</li>
-                    <li>Coordinación de incidencias con proveedor internacional (ATH) durante procesos nocturnos locales y regionales.</li>
-                  </ul>
-                </div>
+        <article class="role">
+          <h3>Ingeniero de Monitoreo y Soporte (NOC) - Cable Onda, Panama</h3>
+          <p><strong>Fecha:</strong> Oct 2012 - Mar 2015</p>
+          <ul>
+            <li>Monitoreo de red corporativa (CORE y distribucion) y gestion de incidentes con clientes corporativos.</li>
+            <li>Coordinacion de visitas tecnicas con planta/contratistas y soporte remoto a personal en campo.</li>
+            <li>Troubleshooting en equipos (Cisco, Tricom, Huawei) y gestion de escalamiento con proveedores de ultima milla.</li>
+          </ul>
+        </article>
 
-                <div class="role">
-                  <div class="role-top">
-                    <div class="role-title">Ingeniero en Operaciones de Datos y Entrega de Servicios - Cable Onda</div>
-                    <div class="role-meta">Mar 2015 - Mar 2017</div>
-                  </div>
-                  <ul>
-                    <li>Administración, aprovisionamiento y soporte de infraestructura de red.</li>
-                    <li>Configuración y troubleshooting de servicios (P2P, Internet, VRF, BGP).</li>
-                    <li>Atención de incidentes escalados y documentación técnica (actividades, diagramas y reportes).</li>
-                  </ul>
-                </div>
+        <article class="role">
+          <h3>Soporte Tecnico - Network Solution, Panama</h3>
+          <p><strong>Fecha:</strong> Mar 2012 - Sep 2012</p>
+          <ul>
+            <li>Soporte a usuarios y resolucion de incidencias en red interna de clientes corporativos.</li>
+            <li>Mantenimiento de equipos en red; instalacion de software y hardware; configuracion de correo.</li>
+            <li>Respaldo de usuarios finales y servidores; asistencia tecnologica y buenas practicas de seguridad.</li>
+          </ul>
+        </article>
+      </section>
 
-                <div class="role">
-                  <div class="role-top">
-                    <div class="role-title">Ingeniero de Monitoreo y Soporte (NOC) - Cable Onda, Panamá</div>
-                    <div class="role-meta">Oct 2012 - Mar 2015</div>
-                  </div>
-                  <ul>
-                    <li>Monitoreo de red corporativa (CORE y distribución) y gestión de incidentes con clientes corporativos.</li>
-                    <li>Coordinación de visitas técnicas con planta/contratistas y soporte remoto a personal en campo.</li>
-                    <li>Troubleshooting en equipos (Cisco, Tricom, Huawei) y gestión de escalamiento con proveedores de última milla.</li>
-                  </ul>
-                </div>
+      <section>
+        <h2>Educacion</h2>
+        <ul>
+          <li>Universidad Latina de Panama - Maestria en Gerencia Informatica con enfasis en Seguridad Computacional</li>
+          <li>Universidad Tecnologica de Panama - Licenciatura en Electronica y Sistemas de Comunicacion</li>
+          <li>Universidad Tecnologica de Panama - Tecnico en Ingenieria (Electronica y Sistemas de Comunicacion)</li>
+          <li>Universidad Tecnologica de Panama - Tecnico en Ingenieria con Especializacion en Desarrollo y Gestion de Software</li>
+          <li>Universidad Tecnologica de Panama - Licenciatura en Desarrollo y Gestion de Software (4. ano, en curso)</li>
+        </ul>
+      </section>
 
-                <div class="role">
-                  <div class="role-top">
-                    <div class="role-title">Soporte Técnico - Network Solution, Panamá</div>
-                    <div class="role-meta">Mar 2012 - Sep 2012</div>
-                  </div>
-                  <ul>
-                    <li>Soporte a usuarios y resolución de incidencias en red interna de clientes corporativos.</li>
-                    <li>Mantenimiento de equipos en red; instalación de software y hardware; configuración de correo.</li>
-                    <li>Respaldo de usuarios finales y servidores; asistencia tecnológica y buenas prácticas de seguridad.</li>
-                  </ul>
-                </div>
-              </section>
-            </div>
+      <section>
+        <h2>Certificaciones y Cursos</h2>
+        <ul>
+          <li>Cisco Networking Academy - CCNA Routing and Switching</li>
+          <li>Seminario de Fibra Optica</li>
+          <li>Seminario de Cableado Estructurado</li>
+          <li>Television Digital en Panama (desafios del apagon analogico)</li>
+          <li>Conceptos de Redes en la Nube: soluciones y servicios</li>
+          <li>Analisis Forense de Redes</li>
+          <li>Selenium Esencial</li>
+          <li>Programming for Everybody (Getting Started with Python)</li>
+          <li>Curso de Primeros Auxilios</li>
+          <li>Curso de Trabajo en Equipo</li>
+        </ul>
+      </section>
 
-            <div>
-              <section>
-                <h2>Educación</h2>
-                <ul>
-                  <li>Universidad Latina de Panamá - Maestría en Gerencia Informática con énfasis en Seguridad Computacional</li>
-                  <li>Universidad Tecnológica de Panamá - Licenciatura en Electrónica y Sistemas de Comunicación</li>
-                  <li>Universidad Tecnológica de Panamá - Técnico en Ingeniería (Electrónica y Sistemas de Comunicación)</li>
-                  <li>Universidad Tecnológica de Panamá - Técnico en Ingeniería con Especialización en Desarrollo y Gestión de Software</li>
-                  <li>Universidad Tecnológica de Panamá - Licenciatura en Desarrollo y Gestión de Software (4.º año, en curso)</li>
-                </ul>
+      <section>
+        <h2>Competencias Tecnicas</h2>
+        <ul>
+          <li>Gestion de incidencias, coordinacion operativa, troubleshooting, continuidad operativa, documentacion tecnica.</li>
+          <li>Mantenimiento preventivo y correctivo en sistemas ferroviarios, electricos y de comunicaciones.</li>
+          <li>Redes y telecomunicaciones: switching, routing, redes inalambricas, soporte de servicios de red.</li>
+          <li>Sistemas y equipos: CBTC, SCADA, PLC, disyuntores, reles de proteccion, transformadores, servidores.</li>
+          <li>Tecnologias de operaciones: Switch, Router, CMTS, OCCAM, IAD, MP-124.</li>
+          <li>Lenguajes: Java, JavaScript, Python, C#, Kotlin.</li>
+          <li>Bases de datos: PostgreSQL, SQL Server, Oracle.</li>
+          <li>Herramientas: Git, GitHub, Git Bash, Visual Studio Code, Visual Studio, Android Studio.</li>
+          <li>Seguridad y desarrollo: buenas practicas de seguridad, Secure SDLC, trabajo colaborativo.</li>
+          <li>Inteligencia artificial aplicada al desarrollo, analisis, automatizacion y soporte documental.</li>
+        </ul>
+      </section>
 
-                <p class="muted" style="margin-top: 10px">Documentación de diplomas y certificaciones disponible bajo solicitud:</p>
-                <ul class="muted" style="margin-top: 6px">
-                  <li>Diploma de Licenciatura</li>
-                  <li>Diploma de Técnico</li>
-                  <li>Diploma de Maestría</li>
-                  <li>Certificado CCNA</li>
-                  <li>Idoneidad de Técnico</li>
-                </ul>
-              </section>
+      <section>
+        <h2>Desarrollo de Software y Proyectos</h2>
+        <ul>
+          <li>Aplicaciones CRUD y APIs orientadas a datos, aplicando POO y buenas practicas.</li>
+          <li>Diseno de bases de datos relacionales, consultas SQL y reportes para casos de uso academicos.</li>
+          <li>Automatizaciones y scripts para tareas repetitivas y validacion de datos.</li>
+          <li>Prototipos con inteligencia artificial para asistentes, extraccion/resumen de informacion y apoyo a soporte/documentacion.</li>
+          <li>Prototipos Android (Kotlin) y utilidades de escritorio (C#) segun requerimientos.</li>
+        </ul>
+      </section>
 
-              <section>
-                <h2>Certificaciones y cursos</h2>
-                <ul>
-                  <li>Cisco Networking Academy - CCNA Routing and Switching</li>
-                  <li>Seminario de Fibra Óptica</li>
-                  <li>Seminario de Cableado Estructurado</li>
-                  <li>Televisión Digital en Panamá (desafíos del apagón analógico)</li>
-                  <li>Conceptos de Redes en la Nube: soluciones y servicios</li>
-                  <li>Análisis Forense de Redes</li>
-                  <li>Selenium Esencial</li>
-                  <li>Programming for Everybody (Getting Started with Python)</li>
-                  <li>Curso de Primeros Auxilios</li>
-                  <li>Curso de Trabajo en Equipo</li>
-                </ul>
-              </section>
+      <section>
+        <h2>Idiomas</h2>
+        <ul>
+          <li>Espanol</li>
+          <li>Ingles (intermedio)</li>
+        </ul>
+      </section>
 
-              <section>
-                <h2>Desarrollo de software</h2>
-                <p class="muted">
-                  Estudiante de 4.º año de la Licenciatura en Desarrollo y Gestión de Software. Desarrollo soluciones en proyectos académicos y personales, con enfoque en calidad, colaboración y documentación. Enfoque práctico en IA aplicada para construir soluciones de software (asistentes, automatización y apoyo a la toma de decisiones).
-                </p>
-                <ul class="muted" style="margin-top: 8px">
-                  <li><strong>Lenguajes:</strong> Java, JavaScript, Python, C#, Kotlin, etc.</li>
-                  <li><strong>Bases de datos:</strong> PostgreSQL, SQL Server, Oracle, etc. (SQL y modelado relacional).</li>
-                  <li><strong>Herramientas:</strong> Git/GitHub, Git Bash, Visual Studio Code, Visual Studio, Android Studio, etc.</li>
-                  <li><strong>Inteligencia Artificial:</strong> uso de IA como soporte al desarrollo (análisis, borradores, refactorización y pruebas) e integración de funcionalidades basadas en IA en aplicaciones.</li>
-                  <li><strong>Trabajo en equipo:</strong> metodologías y prácticas de desarrollo colaborativo.</li>
-                  <li><strong>Seguridad:</strong> buenas prácticas y seguridad integrada al ciclo de vida (Secure SDLC).</li>
-                </ul>
-              </section>
-
-              <section>
-                <h2>Proyectos (académicos y personales)</h2>
-                <ul class="muted">
-                  <li>Aplicaciones CRUD y APIs orientadas a datos, aplicando POO y buenas prácticas.</li>
-                  <li>Diseño de base de datos relacional, consultas SQL y reportes para casos de uso académicos.</li>
-                  <li>Automatizaciones/scripts para tareas repetitivas y validación de datos.</li>
-                  <li>Prototipos con Inteligencia Artificial para automatizar tareas (asistentes, extracción/resumen de información y ayuda a soporte/documentación).</li>
-                  <li>Prototipos Android (Kotlin) y utilidades de escritorio (C#) según requerimientos.</li>
-                </ul>
-              </section>
-
-              <section>
-                <h2>Competencias</h2>
-                <div class="pill-row">
-                  <span class="pill">Coordinación operativa</span>
-                  <span class="pill">Gestión de incidencias</span>
-                  <span class="pill">Mantenimiento preventivo/correctivo</span>
-                  <span class="pill">Documentación técnica</span>
-                  <span class="pill">Troubleshooting</span>
-                  <span class="pill">Redes (switching/routing)</span>
-                  <span class="pill">Inalámbricas</span>
-                  <span class="pill">Seguridad (bases)</span>
-                  <span class="pill">Git/GitHub</span>
-                  <span class="pill">SQL / modelado</span>
-                  <span class="pill">POO</span>
-                  <span class="pill">IA aplicada</span>
-                  <span class="pill">Trabajo colaborativo</span>
-                  <span class="pill">Secure SDLC</span>
-                </div>
-                <p class="muted" style="margin-top: 10px">
-                  Coordinación: planificación de actividades, seguimiento de averías/incidencias, comunicación con áreas internas y proveedores, reportes y documentación.
-                </p>
-                <p class="muted">
-                  Tecnologías (operaciones): Switch, Router, CMTS, OCCAM, IAD, MP-124; soporte a plataformas y servicios de red.
-                </p>
-                <p class="muted">
-                  Tecnologías (software): Java, JavaScript, Python, C#, Kotlin; PostgreSQL, SQL Server, Oracle; VS Code, Visual Studio, Android Studio; Inteligencia Artificial aplicada al desarrollo.
-                </p>
-              </section>
-
-              <section>
-                <h2>Idiomas</h2>
-                <ul>
-                  <li>Español</li>
-                  <li>Inglés (intermedio)</li>
-                </ul>
-              </section>
-
-              <section>
-                <h2>Referencias</h2>
-                <p class="muted">Disponibles a solicitud.</p>
-              </section>
-            </div>
-          </div>
-        </main>
-      </div>
-    </div>
+      <section>
+        <h2>Referencias</h2>
+        <p>Disponibles a solicitud.</p>
+      </section>
+    </main>
   </body>
 </html>
