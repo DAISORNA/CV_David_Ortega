@@ -3,34 +3,53 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>David Isaac Ortega Navarro - Hoja de Vida ATS</title>
-    <meta name="description" content="Hoja de vida en formato ATS de David Isaac Ortega Navarro" />
+    <title>David Isaac Ortega Navarro - Hoja de Vida</title>
+    <meta name="description" content="Hoja de vida profesional de David Isaac Ortega Navarro" />
     <style>
+      :root {
+        --paper: #ffffff;
+        --ink: #111827;
+        --muted: #4b5563;
+        --line: #dbe2ea;
+        --accent: #0f766e;
+        --accent-soft: rgba(15, 118, 110, 0.1);
+      }
       body {
-        margin: 24px;
+        margin: 0;
         font-family: Arial, Calibri, sans-serif;
-        color: #111;
+        color: var(--ink);
         line-height: 1.45;
-        background: #fff;
+        background:
+          radial-gradient(1000px 520px at 10% 0%, rgba(15, 118, 110, 0.14), transparent 55%),
+          radial-gradient(820px 460px at 95% 0%, rgba(14, 116, 144, 0.1), transparent 50%),
+          #f7fafc;
       }
       main {
         max-width: 980px;
-        margin: 0 auto;
+        margin: 24px auto;
+        padding: 24px;
+        background: var(--paper);
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        box-shadow: 0 16px 40px rgba(2, 6, 23, 0.09);
       }
       h1, h2, h3 {
         margin: 0 0 8px;
       }
       h1 {
-        font-size: 28px;
+        font-size: 32px;
+        line-height: 1.15;
       }
       h2 {
         margin-top: 20px;
-        font-size: 20px;
-        border-bottom: 1px solid #ccc;
-        padding-bottom: 4px;
+        font-size: 18px;
+        border-bottom: 1px solid var(--line);
+        padding-bottom: 6px;
+        text-transform: uppercase;
+        letter-spacing: 0.02em;
       }
       h3 {
-        margin-top: 14px;
+        margin-top: 4px;
         font-size: 16px;
       }
       p {
@@ -39,21 +58,76 @@
       ul {
         margin: 0 0 10px 20px;
       }
+      header {
+        border-bottom: 1px solid var(--line);
+        padding-bottom: 14px;
+      }
+      section {
+        margin-top: 14px;
+        padding: 12px;
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        background: #ffffff;
+      }
       .meta p {
         margin: 2px 0;
+        color: var(--muted);
       }
       .role {
-        margin-bottom: 12px;
+        margin-bottom: 10px;
+        padding: 10px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: linear-gradient(180deg, #ffffff, #fbfdff);
       }
       .plain-label {
         font-weight: 700;
+        color: var(--ink);
+      }
+      header > p {
+        display: inline-block;
+        margin-bottom: 10px;
+        padding: 4px 10px;
+        font-size: 13px;
+        border: 1px solid rgba(15, 118, 110, 0.25);
+        border-radius: 999px;
+        background: var(--accent-soft);
+        color: #0f4f49;
+      }
+      section > p {
+        text-align: justify;
+      }
+      li {
+        margin-bottom: 4px;
+      }
+      @media (max-width: 760px) {
+        main {
+          margin: 0;
+          border-radius: 0;
+          border-left: none;
+          border-right: none;
+          padding: 16px;
+        }
       }
       @media print {
         @page {
           margin: 12mm;
         }
         body {
+          background: #fff;
           margin: 0;
+        }
+        main {
+          margin: 0;
+          padding: 0;
+          border: none;
+          border-radius: 0;
+          box-shadow: none;
+        }
+        section,
+        .role {
+          border-color: #d1d5db;
+          background: #fff;
         }
       }
     </style>
@@ -108,7 +182,7 @@
     <main>
       <header>
         <h1>David Isaac Ortega Navarro</h1>
-        <p><strong>Hoja de Vida - Formato ATS (estricto)</strong></p>
+        <p><strong>Hoja de Vida</strong></p>
         <div class="meta">
           <p><span class="plain-label">Telefono:</span> +507 6679-3944</p>
           <p><span class="plain-label">Correo:</span> dortegana@hotmail.com</p>
