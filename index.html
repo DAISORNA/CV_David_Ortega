@@ -75,6 +75,10 @@
         color: inherit;
       }
 
+      [id] {
+        scroll-margin-top: 88px;
+      }
+
       .page-shell {
         width: min(var(--max-width), calc(100% - 32px));
         margin: 28px auto 52px;
@@ -282,6 +286,30 @@
         border: 1px solid rgba(23, 63, 58, 0.11);
         border-radius: var(--radius-lg);
         background: rgba(255, 255, 255, 0.66);
+      }
+
+      .section-card.is-highlighted,
+      .side-card.is-highlighted {
+        position: relative;
+        z-index: 2;
+        animation: sectionPulse 1s ease-in-out infinite;
+      }
+
+      @keyframes sectionPulse {
+        0%,
+        100% {
+          border-color: rgba(23, 63, 58, 0.14);
+          box-shadow: 0 0 0 0 rgba(217, 236, 229, 0);
+          transform: translateY(0);
+        }
+
+        50% {
+          border-color: rgba(23, 63, 58, 0.58);
+          box-shadow:
+            0 0 0 8px rgba(217, 236, 229, 0.96),
+            0 24px 58px rgba(23, 63, 58, 0.24);
+          transform: translateY(-3px);
+        }
       }
 
       .section-title {
@@ -506,6 +534,10 @@
           margin-top: 10px;
         }
 
+        [id] {
+          scroll-margin-top: 22px;
+        }
+
         .resume {
           border-radius: 22px;
         }
@@ -557,6 +589,14 @@
         .education-item,
         .contact-item {
           break-inside: avoid;
+        }
+
+        .section-card.is-highlighted,
+        .side-card.is-highlighted {
+          animation: none;
+          border-color: rgba(23, 63, 58, 0.11);
+          box-shadow: none;
+          transform: none;
         }
       }
     </style>
@@ -940,5 +980,41 @@
 
       <p class="footer-note">Hoja de vida optimizada para lectura web, dispositivos móviles e impresión en PDF.</p>
     </div>
+
+    <script>
+      const highlightDuration = 10000;
+      let activeHighlightTimer;
+
+      function highlightSection(sectionId) {
+        const target = document.getElementById(sectionId);
+
+        if (!target) {
+          return;
+        }
+
+        document.querySelectorAll(".is-highlighted").forEach(function (section) {
+          section.classList.remove("is-highlighted");
+        });
+
+        window.clearTimeout(activeHighlightTimer);
+        target.classList.add("is-highlighted");
+
+        activeHighlightTimer = window.setTimeout(function () {
+          target.classList.remove("is-highlighted");
+        }, highlightDuration);
+      }
+
+      document.querySelectorAll('.nav-pills a[href^="#"]').forEach(function (link) {
+        link.addEventListener("click", function () {
+          highlightSection(link.getAttribute("href").slice(1));
+        });
+      });
+
+      if (window.location.hash) {
+        window.setTimeout(function () {
+          highlightSection(window.location.hash.slice(1));
+        }, 250);
+      }
+    </script>
   </body>
 </html>
