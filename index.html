@@ -3,183 +3,688 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>David Isaac Ortega Navarro - Hoja de Vida</title>
-    <meta name="description" content="Hoja de vida profesional de David Isaac Ortega Navarro" />
+    <title>David Isaac Ortega Navarro | Hoja de Vida</title>
+    <meta
+      name="description"
+      content="Hoja de vida profesional de David Isaac Ortega Navarro, especialista en operaciones tecnologicas criticas, sistemas ferroviarios, telecomunicaciones y desarrollo de software."
+    />
+    <meta name="theme-color" content="#173f3a" />
+    <meta property="og:title" content="David Isaac Ortega Navarro | Hoja de Vida" />
+    <meta property="og:description" content="Perfil profesional en sistemas criticos, telecomunicaciones, infraestructura TI y desarrollo de software." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="profile.png" />
+
     <style>
       :root {
-        --paper: #ffffff;
-        --ink: #111827;
-        --muted: #4b5563;
-        --line: #dbe2ea;
-        --accent: #0f766e;
-        --accent-soft: rgba(15, 118, 110, 0.1);
+        color-scheme: light;
+        --bg: #f6f1eb;
+        --bg-soft: #fbf8f3;
+        --paper: #fffdf8;
+        --paper-strong: #ffffff;
+        --ink: #17211f;
+        --muted: #64716d;
+        --line: #ded8cc;
+        --accent: #173f3a;
+        --accent-2: #8faea5;
+        --accent-3: #d9ece5;
+        --sand: #eadcc8;
+        --rose: #f1dad5;
+        --blue: #dce8f1;
+        --shadow: 0 24px 70px rgba(23, 33, 31, 0.12);
+        --radius-xl: 34px;
+        --radius-lg: 24px;
+        --radius-md: 16px;
+        --max-width: 1180px;
       }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
       body {
         margin: 0;
-        font-family: Arial, Calibri, sans-serif;
+        min-width: 320px;
         color: var(--ink);
-        line-height: 1.45;
+        font-family:
+          Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        line-height: 1.65;
         background:
-          radial-gradient(1000px 520px at 10% 0%, rgba(15, 118, 110, 0.14), transparent 55%),
-          radial-gradient(820px 460px at 95% 0%, rgba(14, 116, 144, 0.1), transparent 50%),
-          #f7fafc;
+          radial-gradient(circle at 8% 8%, rgba(143, 174, 165, 0.33), transparent 32rem),
+          radial-gradient(circle at 92% 2%, rgba(241, 218, 213, 0.56), transparent 28rem),
+          linear-gradient(135deg, var(--bg), #f8f6f0 48%, #eef5f1);
       }
-      .page {
-        max-width: 980px;
-        margin: 24px auto;
-        padding: 0 16px 24px;
+
+      body::before {
+        position: fixed;
+        inset: 0;
+        z-index: -1;
+        pointer-events: none;
+        content: "";
+        background-image:
+          linear-gradient(rgba(23, 63, 58, 0.035) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(23, 63, 58, 0.035) 1px, transparent 1px);
+        background-size: 44px 44px;
+        mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), transparent 72%);
       }
-      .card {
-        background: var(--paper);
-        border: 1px solid var(--line);
-        border-radius: 16px;
-        box-shadow: 0 16px 40px rgba(2, 6, 23, 0.09);
-        overflow: hidden;
+
+      a {
+        color: inherit;
       }
-      .topbar {
+
+      .page-shell {
+        width: min(var(--max-width), calc(100% - 32px));
+        margin: 28px auto 52px;
+      }
+
+      .site-actions {
         display: flex;
         justify-content: flex-end;
         gap: 10px;
-        padding: 12px 14px;
-        border-bottom: 1px solid var(--line);
-        background: linear-gradient(180deg, rgba(241, 245, 249, 0.92), rgba(255, 255, 255, 0.84));
+        margin-bottom: 14px;
       }
+
       .btn {
-        appearance: none;
-        border: 1px solid var(--line);
-        background: #ffffff;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 42px;
+        padding: 10px 16px;
+        border: 1px solid rgba(23, 63, 58, 0.16);
         border-radius: 999px;
-        padding: 8px 12px;
-        font-size: 13px;
-        font-weight: 600;
-        color: var(--ink);
+        color: var(--accent);
+        font-size: 0.88rem;
+        font-weight: 800;
+        letter-spacing: 0.01em;
         text-decoration: none;
+        background: rgba(255, 253, 248, 0.78);
+        box-shadow: 0 10px 28px rgba(23, 33, 31, 0.08);
         cursor: pointer;
+        transition:
+          transform 180ms ease,
+          box-shadow 180ms ease,
+          background 180ms ease;
       }
-      .btn-primary {
-        border-color: rgba(15, 118, 110, 0.35);
-        background: rgba(15, 118, 110, 0.1);
-      }
-      main {
-        padding: 24px;
-      }
-      h1, h2, h3 {
-        margin: 0 0 8px;
-      }
-      h1 {
-        font-size: 32px;
-        line-height: 1.15;
-      }
-      h2 {
-        margin-top: 20px;
-        font-size: 18px;
-        border-bottom: 1px solid var(--line);
-        padding-bottom: 6px;
-        text-transform: uppercase;
-        letter-spacing: 0.02em;
-      }
-      h3 {
-        margin-top: 4px;
-        font-size: 16px;
-      }
-      p {
-        margin: 0 0 10px;
-      }
-      ul {
-        margin: 0 0 10px 20px;
-      }
-      header {
-        border-bottom: 1px solid var(--line);
-        padding-bottom: 14px;
-      }
-      .header-grid {
-        display: block;
-      }
-      section {
-        margin-top: 14px;
-        padding: 12px;
-        border: 1px solid var(--line);
-        border-radius: 10px;
+
+      .btn:hover,
+      .btn:focus-visible {
+        transform: translateY(-2px);
         background: #ffffff;
+        box-shadow: 0 16px 36px rgba(23, 33, 31, 0.13);
       }
-      .meta p {
-        margin: 2px 0;
+
+      .btn-primary {
+        color: #ffffff;
+        border-color: transparent;
+        background: linear-gradient(135deg, var(--accent), #285f57);
+      }
+
+      .resume {
+        overflow: hidden;
+        border: 1px solid rgba(23, 63, 58, 0.12);
+        border-radius: var(--radius-xl);
+        background: rgba(255, 253, 248, 0.82);
+        box-shadow: var(--shadow);
+        backdrop-filter: blur(18px);
+      }
+
+      .hero {
+        position: relative;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 330px;
+        gap: 34px;
+        padding: 44px;
+        color: #f8fbf8;
+        background:
+          linear-gradient(120deg, rgba(23, 63, 58, 0.96), rgba(47, 95, 87, 0.91)),
+          radial-gradient(circle at 78% 14%, rgba(217, 236, 229, 0.34), transparent 22rem);
+      }
+
+      .hero::after {
+        position: absolute;
+        right: -70px;
+        bottom: -110px;
+        width: 300px;
+        height: 300px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        border-radius: 999px;
+        content: "";
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        width: fit-content;
+        margin: 0 0 18px;
+        padding: 7px 12px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 999px;
+        color: #eaf7f2;
+        font-size: 0.76rem;
+        font-weight: 900;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        background: rgba(255, 255, 255, 0.08);
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin-top: 0;
+      }
+
+      h1 {
+        max-width: 760px;
+        margin-bottom: 14px;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(2.55rem, 6vw, 5.3rem);
+        line-height: 0.92;
+        letter-spacing: -0.075em;
+      }
+
+      .hero-subtitle {
+        max-width: 780px;
+        margin-bottom: 24px;
+        color: #dbeee8;
+        font-size: clamp(1rem, 2vw, 1.28rem);
+        line-height: 1.6;
+      }
+
+      .hero-tags,
+      .skill-cloud,
+      .nav-pills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 0;
+        list-style: none;
+      }
+
+      .hero-tags {
+        margin: 0;
+      }
+
+      .hero-tags li {
+        padding: 8px 12px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        border-radius: 999px;
+        color: #f8fbf8;
+        font-size: 0.84rem;
+        font-weight: 750;
+        background: rgba(255, 255, 255, 0.08);
+      }
+
+      .profile-card {
+        position: relative;
+        z-index: 1;
+        align-self: start;
+        padding: 16px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 28px;
+        background: rgba(255, 255, 255, 0.12);
+        box-shadow: 0 24px 60px rgba(0, 0, 0, 0.16);
+      }
+
+      .profile-photo {
+        display: block;
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        border: 8px solid rgba(255, 255, 255, 0.14);
+        border-radius: 24px;
+        object-fit: cover;
+        background: var(--accent-3);
+      }
+
+      .profile-caption {
+        margin: 14px 4px 0;
+        color: #e9f5f1;
+        font-size: 0.95rem;
+      }
+
+      .quick-stats {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1px;
+        background: rgba(23, 63, 58, 0.1);
+      }
+
+      .stat {
+        min-height: 124px;
+        padding: 22px;
+        background: rgba(255, 253, 248, 0.76);
+      }
+
+      .stat strong {
+        display: block;
+        color: var(--accent);
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(1.9rem, 4vw, 3rem);
+        line-height: 1;
+      }
+
+      .stat span {
+        display: block;
+        margin-top: 8px;
+        color: var(--muted);
+        font-size: 0.88rem;
+        font-weight: 750;
+      }
+
+      .nav-card {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        padding: 12px 18px;
+        border-top: 1px solid rgba(23, 63, 58, 0.08);
+        border-bottom: 1px solid rgba(23, 63, 58, 0.08);
+        background: rgba(255, 253, 248, 0.9);
+        backdrop-filter: blur(16px);
+      }
+
+      .nav-pills {
+        justify-content: center;
+        margin: 0;
+      }
+
+      .nav-pills a {
+        display: inline-flex;
+        padding: 8px 12px;
+        border-radius: 999px;
+        color: var(--muted);
+        font-size: 0.82rem;
+        font-weight: 850;
+        text-decoration: none;
+      }
+
+      .nav-pills a:hover,
+      .nav-pills a:focus-visible {
+        color: var(--accent);
+        background: var(--accent-3);
+      }
+
+      .content-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 330px;
+        gap: 24px;
+        padding: 34px;
+      }
+
+      .main-flow,
+      .side-flow {
+        display: grid;
+        gap: 22px;
+        align-content: start;
+      }
+
+      .section-card {
+        padding: clamp(22px, 4vw, 34px);
+        border: 1px solid rgba(23, 63, 58, 0.11);
+        border-radius: var(--radius-lg);
+        background: rgba(255, 255, 255, 0.66);
+      }
+
+      .section-title {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 18px;
+      }
+
+      .section-title::before {
+        width: 12px;
+        height: 12px;
+        border-radius: 999px;
+        content: "";
+        background: var(--accent-2);
+        box-shadow: 0 0 0 8px rgba(143, 174, 165, 0.18);
+      }
+
+      h2 {
+        margin-bottom: 0;
+        color: var(--accent);
+        font-size: 0.85rem;
+        font-weight: 950;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+      }
+
+      h3 {
+        margin-bottom: 6px;
+        color: #1b2b28;
+        font-size: 1.12rem;
+        line-height: 1.25;
+      }
+
+      .lead {
+        margin-bottom: 0;
+        color: #34413d;
+        font-size: 1.04rem;
+      }
+
+      .timeline {
+        display: grid;
+        gap: 18px;
+      }
+
+      .role {
+        position: relative;
+        display: grid;
+        grid-template-columns: 148px minmax(0, 1fr);
+        gap: 20px;
+        padding: 20px;
+        border: 1px solid rgba(23, 63, 58, 0.1);
+        border-radius: 20px;
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(251, 248, 243, 0.78));
+      }
+
+      .role-period {
+        color: var(--accent);
+        font-size: 0.78rem;
+        font-weight: 950;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .role-company {
+        margin-bottom: 12px;
+        color: var(--muted);
+        font-weight: 800;
+      }
+
+      .role ul,
+      .clean-list {
+        margin: 0;
+        padding-left: 20px;
+      }
+
+      .role li,
+      .clean-list li {
+        margin-bottom: 8px;
+      }
+
+      .role li::marker,
+      .clean-list li::marker {
+        color: var(--accent-2);
+      }
+
+      .project-grid,
+      .education-grid {
+        display: grid;
+        gap: 14px;
+      }
+
+      .project-card,
+      .education-item,
+      .contact-item {
+        padding: 16px;
+        border: 1px solid rgba(23, 63, 58, 0.1);
+        border-radius: var(--radius-md);
+        background: rgba(255, 255, 255, 0.58);
+      }
+
+      .project-card strong,
+      .education-item strong,
+      .contact-item strong {
+        display: block;
+        color: var(--accent);
+        font-size: 0.84rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .project-card p,
+      .education-item p,
+      .contact-item p {
+        margin: 5px 0 0;
+        color: #3f4c48;
+      }
+
+      .side-card {
+        padding: 22px;
+        border: 1px solid rgba(23, 63, 58, 0.11);
+        border-radius: var(--radius-lg);
+        background: rgba(255, 255, 255, 0.64);
+      }
+
+      .side-card.accent {
+        background: linear-gradient(150deg, rgba(217, 236, 229, 0.86), rgba(255, 253, 248, 0.74));
+      }
+
+      .side-card h2 {
+        margin-bottom: 14px;
+      }
+
+      .contact-list {
+        display: grid;
+        gap: 10px;
+      }
+
+      .contact-item a {
+        text-decoration: none;
+      }
+
+      .skill-cloud {
+        margin: 0;
+      }
+
+      .skill-cloud li {
+        padding: 8px 11px;
+        border: 1px solid rgba(23, 63, 58, 0.11);
+        border-radius: 999px;
+        color: #2f3d39;
+        font-size: 0.84rem;
+        font-weight: 760;
+        background: rgba(255, 255, 255, 0.62);
+      }
+
+      .cert-list {
+        display: grid;
+        gap: 9px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .cert-list li {
+        padding: 10px 12px;
+        border-radius: 13px;
+        color: #35433f;
+        background: rgba(255, 255, 255, 0.54);
+      }
+
+      .qr-box {
+        display: grid;
+        grid-template-columns: 86px minmax(0, 1fr);
+        gap: 14px;
+        align-items: center;
+      }
+
+      .qr-box img {
+        width: 86px;
+        height: 86px;
+        border-radius: 14px;
+        object-fit: cover;
+      }
+
+      .qr-box p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+
+      .references {
+        margin-bottom: 0;
         color: var(--muted);
       }
-      .role {
-        margin-bottom: 10px;
-        padding: 10px;
-        border: 1px solid var(--line);
-        border-radius: 8px;
-        background: linear-gradient(180deg, #ffffff, #fbfdff);
+
+      .footer-note {
+        margin: 20px 0 0;
+        color: rgba(23, 33, 31, 0.58);
+        font-size: 0.86rem;
+        text-align: center;
       }
-      .plain-label {
-        font-weight: 700;
-        color: var(--ink);
-      }
-      header > p {
-        display: inline-block;
-        margin-bottom: 10px;
-        padding: 4px 10px;
-        font-size: 13px;
-        border: 1px solid rgba(15, 118, 110, 0.25);
-        border-radius: 999px;
-        background: var(--accent-soft);
-        color: #0f4f49;
-      }
-      section > p {
-        text-align: justify;
-      }
-      li {
-        margin-bottom: 4px;
-      }
-      @media (max-width: 760px) {
-        main {
-          margin: 0;
-          border-radius: 0;
-          padding: 16px;
+
+      @media (max-width: 960px) {
+        .hero,
+        .content-grid {
+          grid-template-columns: 1fr;
         }
-        .page {
-          padding: 0;
+
+        .profile-card {
+          max-width: 360px;
         }
-        .card {
-          border-radius: 0;
-          border-left: none;
-          border-right: none;
+
+        .quick-stats {
+          grid-template-columns: repeat(2, 1fr);
         }
       }
+
+      @media (max-width: 680px) {
+        .page-shell {
+          width: min(100% - 18px, var(--max-width));
+          margin-top: 10px;
+        }
+
+        .site-actions {
+          justify-content: stretch;
+        }
+
+        .site-actions .btn {
+          flex: 1;
+          padding-inline: 10px;
+        }
+
+        .resume {
+          border-radius: 22px;
+        }
+
+        .hero,
+        .content-grid {
+          padding: 22px;
+        }
+
+        .quick-stats {
+          grid-template-columns: 1fr;
+        }
+
+        .nav-card {
+          position: static;
+        }
+
+        .nav-pills {
+          justify-content: flex-start;
+          overflow-x: auto;
+          flex-wrap: nowrap;
+          padding-bottom: 4px;
+        }
+
+        .nav-pills li {
+          flex: 0 0 auto;
+        }
+
+        .role {
+          grid-template-columns: 1fr;
+          gap: 8px;
+        }
+      }
+
       @media print {
         @page {
           margin: 12mm;
         }
+
         body {
-          background: #fff;
+          color: #111827;
+          background: #ffffff;
+        }
+
+        body::before,
+        .site-actions,
+        .nav-card,
+        .profile-card,
+        .qr-box {
+          display: none !important;
+        }
+
+        .page-shell {
+          width: 100%;
           margin: 0;
         }
-        .page {
-          margin: 0;
-          padding: 0;
-          max-width: none;
-        }
-        .card {
-          border: none;
-          border-radius: 0;
+
+        .resume,
+        .section-card,
+        .side-card,
+        .role,
+        .project-card,
+        .education-item,
+        .contact-item {
+          border-color: #d1d5db;
           box-shadow: none;
+          background: #ffffff;
         }
-        .topbar {
+
+        .resume {
+          border: 0;
+          border-radius: 0;
+        }
+
+        .hero {
+          display: block;
+          padding: 0 0 14px;
+          color: #111827;
+          background: #ffffff;
+          border-bottom: 2px solid #d1d5db;
+        }
+
+        .hero::after,
+        .eyebrow,
+        .hero-tags,
+        .quick-stats {
           display: none;
         }
-        main {
-          margin: 0;
-          padding: 0;
-          border: none;
-          border-radius: 0;
-          box-shadow: none;
+
+        h1 {
+          margin-bottom: 8px;
+          color: #111827;
+          font-size: 32pt;
+          letter-spacing: -0.04em;
         }
-        section,
+
+        .hero-subtitle {
+          color: #374151;
+        }
+
+        .content-grid {
+          display: block;
+          padding: 14px 0 0;
+        }
+
+        .main-flow,
+        .side-flow {
+          display: block;
+        }
+
+        .section-card,
+        .side-card {
+          break-inside: avoid;
+          margin-bottom: 12px;
+          padding: 14px 0;
+          border: 0;
+          border-radius: 0;
+        }
+
         .role {
-          border-color: #d1d5db;
-          background: #fff;
+          break-inside: avoid;
+          padding: 10px 0;
+          border-width: 0 0 1px;
+          border-radius: 0;
+        }
+
+        .footer-note {
+          display: none;
         }
       }
     </style>
@@ -195,9 +700,9 @@
           "@type": "PostalAddress",
           "addressCountry": "Panama"
         },
-        "url": "https://github.com/DAISORNA",
+        "url": "https://daisorna.github.io/CV_David_Ortega/",
         "sameAs": ["https://github.com/DAISORNA"],
-        "jobTitle": "Especialista en operaciones, mantenimiento y sistemas tecnologicos criticos",
+        "jobTitle": "Especialista en operaciones tecnologicas criticas, sistemas ferroviarios y desarrollo de software",
         "knowsAbout": [
           "CBTC",
           "SCADA",
@@ -231,200 +736,348 @@
   </head>
 
   <body>
-    <div class="page">
-      <div class="card">
-        <div class="topbar">
-          <button class="btn btn-primary" type="button" onclick="window.print()">Imprimir / Guardar PDF</button>
-          <a class="btn" href="https://github.com/DAISORNA/CV_David_Ortega" target="_blank" rel="noreferrer">Ver en GitHub</a>
-        </div>
-        <main>
-          <header>
-            <div class="header-grid">
-              <div>
-                <h1>David Isaac Ortega Navarro</h1>
-                <p><strong>Hoja de Vida</strong></p>
-                <div class="meta">
-                  <p><span class="plain-label">Telefono:</span> +507 6679-3944</p>
-                  <p><span class="plain-label">Correo:</span> dortegana@hotmail.com</p>
-                  <p><span class="plain-label">GitHub:</span> github.com/DAISORNA</p>
-                  <p><span class="plain-label">Ubicacion:</span> Panama</p>
-                  <p><span class="plain-label">Especialidad:</span> Operaciones y mantenimiento en sistemas criticos ferroviarios y telecomunicaciones | Desarrollo de software</p>
+    <div class="page-shell">
+      <div class="site-actions" aria-label="Acciones de la hoja de vida">
+        <button class="btn btn-primary" id="printButton" type="button">Imprimir / Guardar PDF</button>
+        <a class="btn" href="https://github.com/DAISORNA/CV_David_Ortega" target="_blank" rel="noreferrer">Ver en GitHub</a>
+      </div>
+
+      <article class="resume">
+        <header class="hero" id="inicio">
+          <div>
+            <p class="eyebrow">Hoja de vida profesional</p>
+            <h1>David Isaac Ortega Navarro</h1>
+            <p class="hero-subtitle">
+              Especialista en operaciones tecnologicas criticas, mantenimiento ferroviario, telecomunicaciones e infraestructura TI, con formacion activa en desarrollo de software, automatizacion, ciberseguridad e inteligencia artificial aplicada.
+            </p>
+            <ul class="hero-tags" aria-label="Areas principales">
+              <li>Sistemas CBTC y SCADA</li>
+              <li>Redes y telecomunicaciones</li>
+              <li>Continuidad operativa</li>
+              <li>Desarrollo de software</li>
+            </ul>
+          </div>
+
+          <aside class="profile-card" aria-label="Foto de perfil">
+            <img class="profile-photo" src="profile.png" alt="Foto profesional de David Isaac Ortega Navarro" />
+            <p class="profile-caption">
+              Perfil tecnico con enfoque en estabilidad, seguridad, documentacion y mejora continua de servicios criticos.
+            </p>
+          </aside>
+        </header>
+
+        <section class="quick-stats" aria-label="Indicadores profesionales destacados">
+          <div class="stat">
+            <strong>12+</strong>
+            <span>Anios de experiencia en entornos tecnologicos criticos</span>
+          </div>
+          <div class="stat">
+            <strong>4</strong>
+            <span>Areas clave: ferroviario, energia, redes y software</span>
+          </div>
+          <div class="stat">
+            <strong>24/7</strong>
+            <span>Experiencia en operacion, monitoreo e incidentes</span>
+          </div>
+          <div class="stat">
+            <strong>IA</strong>
+            <span>Automatizacion y analisis aplicado a procesos tecnicos</span>
+          </div>
+        </section>
+
+        <nav class="nav-card" aria-label="Navegacion principal">
+          <ul class="nav-pills">
+            <li><a href="#perfil">Perfil</a></li>
+            <li><a href="#experiencia">Experiencia</a></li>
+            <li><a href="#software">Software</a></li>
+            <li><a href="#educacion">Educacion</a></li>
+            <li><a href="#competencias">Competencias</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </nav>
+
+        <div class="content-grid">
+          <main class="main-flow">
+            <section class="section-card" id="perfil">
+              <div class="section-title">
+                <h2>Perfil Ejecutivo</h2>
+              </div>
+              <p class="lead">
+                Profesional con mas de 12 anios de experiencia en operaciones, monitoreo y gestion de incidencias en entornos tecnologicos criticos, incluyendo telecomunicaciones, redes corporativas, infraestructura TI, sistemas ferroviarios, hardware industrial y plataformas de software. Combina experiencia en campo, soporte de infraestructura, analisis de fallas y documentacion tecnica con una vision moderna orientada a automatizacion, seguridad y desarrollo de soluciones.
+              </p>
+            </section>
+
+            <section class="section-card" id="experiencia">
+              <div class="section-title">
+                <h2>Experiencia Profesional</h2>
+              </div>
+
+              <div class="timeline">
+                <article class="role">
+                  <div class="role-period">Feb 2024 - Presente</div>
+                  <div>
+                    <h3>Tecnico de Senalizacion (CBTC)</h3>
+                    <p class="role-company">ALSTOM Panama</p>
+                    <ul>
+                      <li>Ejecucion de mantenimiento preventivo y correctivo en sistemas CBTC, asegurando continuidad operativa y disponibilidad de plataformas ferroviarias criticas.</li>
+                      <li>Monitoreo, analisis y seguimiento de incidentes y averias bajo estandares de calidad y seguridad.</li>
+                      <li>Administracion y soporte de infraestructura de comunicaciones entre trenes y centro de control: fibra optica, switches, antenas, servidores y SCADA.</li>
+                      <li>Gestion de entornos de comunicacion segura y soporte a sistemas tecnologicos ferroviarios de mision critica.</li>
+                    </ul>
+                  </div>
+                </article>
+
+                <article class="role">
+                  <div class="role-period">Ene 2022 - Feb 2024</div>
+                  <div>
+                    <h3>Tecnico de Energia</h3>
+                    <p class="role-company">ALSTOM Panama</p>
+                    <ul>
+                      <li>Mantenimiento preventivo y correctivo en sistemas electricos de media y baja tension para subestaciones y gabinetes electricos de la Linea 2 del Metro de Panama.</li>
+                      <li>Diagnostico y analisis de fallas electricas con acciones correctivas para garantizar continuidad del servicio.</li>
+                      <li>Operacion, monitoreo y verificacion de disyuntores, reles de proteccion, PLC, SCADA y equipos electricos industriales.</li>
+                      <li>Pruebas electricas y de aislamiento en transformadores, estaciones de pasajeros y acometidas de potencia.</li>
+                    </ul>
+                  </div>
+                </article>
+
+                <article class="role">
+                  <div class="role-period">Dic 2019 - Dic 2022</div>
+                  <div>
+                    <h3>Tecnico de Material Rodante</h3>
+                    <p class="role-company">ALSTOM Panama</p>
+                    <ul>
+                      <li>Mantenimiento preventivo y correctivo en trenes y sistemas de material rodante del Metro de Panama.</li>
+                      <li>Diagnostico, analisis y resolucion de averias tecnicas, incluyendo informes de investigacion y causa raiz.</li>
+                      <li>Seguimiento de fallas recurrentes y propuestas de mejora para optimizar rendimiento y confiabilidad.</li>
+                      <li>Analisis de registros y software de mantenimiento de equipos a bordo para mejorar procesos de mantenimiento.</li>
+                    </ul>
+                  </div>
+                </article>
+
+                <article class="role">
+                  <div class="role-period">Jun 2018 - Dic 2019</div>
+                  <div>
+                    <h3>Ingeniero de Pruebas y Puesta en Marcha</h3>
+                    <p class="role-company">ALSTOM Panama</p>
+                    <ul>
+                      <li>Planificacion, coordinacion y ejecucion de pruebas para subsistemas ferroviarios: senalizacion, comunicacion, energia, material rodante y catenaria.</li>
+                      <li>Produccion y ejecucion de planes de prueba, coordinando recursos y participantes en sitio.</li>
+                      <li>Gestion de planes de accion ante mal funcionamiento para cumplir objetivos contractuales.</li>
+                    </ul>
+                  </div>
+                </article>
+
+                <article class="role">
+                  <div class="role-period">Abr 2017 - Jun 2018</div>
+                  <div>
+                    <h3>Operador de Redes Electronicas (NOC)</h3>
+                    <p class="role-company">Telered, Panama</p>
+                    <ul>
+                      <li>Monitoreo y aseguramiento de disponibilidad de servicios Clave y Clave Pago a nivel nacional.</li>
+                      <li>Seguimiento de procesos de intercambio de transacciones ACH en horarios establecidos.</li>
+                      <li>Coordinacion de incidencias con proveedor internacional ATH durante procesos nocturnos locales y regionales.</li>
+                    </ul>
+                  </div>
+                </article>
+
+                <article class="role">
+                  <div class="role-period">Mar 2015 - Mar 2017</div>
+                  <div>
+                    <h3>Ingeniero en Operaciones de Datos y Entrega de Servicios</h3>
+                    <p class="role-company">Cable Onda</p>
+                    <ul>
+                      <li>Administracion, aprovisionamiento y soporte de infraestructura de red.</li>
+                      <li>Configuracion y troubleshooting de servicios P2P, Internet, VRF y BGP.</li>
+                      <li>Atencion de incidentes escalados y documentacion tecnica: actividades, diagramas y reportes.</li>
+                    </ul>
+                  </div>
+                </article>
+
+                <article class="role">
+                  <div class="role-period">Oct 2012 - Mar 2015</div>
+                  <div>
+                    <h3>Ingeniero de Monitoreo y Soporte (NOC)</h3>
+                    <p class="role-company">Cable Onda, Panama</p>
+                    <ul>
+                      <li>Monitoreo de red corporativa CORE y distribucion, con gestion de incidentes para clientes corporativos.</li>
+                      <li>Coordinacion de visitas tecnicas con planta, contratistas y soporte remoto a personal en campo.</li>
+                      <li>Troubleshooting en equipos Cisco, Tricom y Huawei, con escalamiento a proveedores de ultima milla.</li>
+                    </ul>
+                  </div>
+                </article>
+
+                <article class="role">
+                  <div class="role-period">Mar 2012 - Sep 2012</div>
+                  <div>
+                    <h3>Soporte Tecnico</h3>
+                    <p class="role-company">Network Solution, Panama</p>
+                    <ul>
+                      <li>Soporte a usuarios y resolucion de incidencias en red interna de clientes corporativos.</li>
+                      <li>Mantenimiento de equipos en red, instalacion de software y hardware, y configuracion de correo.</li>
+                      <li>Respaldo de usuarios finales y servidores, asistencia tecnologica y buenas practicas de seguridad.</li>
+                    </ul>
+                  </div>
+                </article>
+              </div>
+            </section>
+
+            <section class="section-card" id="software">
+              <div class="section-title">
+                <h2>Desarrollo de Software y Proyectos</h2>
+              </div>
+              <div class="project-grid">
+                <article class="project-card">
+                  <strong>Aplicaciones y APIs</strong>
+                  <p>Aplicaciones CRUD y APIs orientadas a datos, aplicando programacion orientada a objetos y buenas practicas de desarrollo.</p>
+                </article>
+                <article class="project-card">
+                  <strong>Datos y automatizacion</strong>
+                  <p>Diseno de bases de datos relacionales, consultas SQL, reportes academicos, scripts para tareas repetitivas y validacion de datos.</p>
+                </article>
+                <article class="project-card">
+                  <strong>Inteligencia artificial</strong>
+                  <p>Prototipos con IA para asistentes, extraccion y resumen de informacion, soporte documental y optimizacion de procesos tecnicos.</p>
+                </article>
+                <article class="project-card">
+                  <strong>Movil y escritorio</strong>
+                  <p>Prototipos Android en Kotlin y utilidades de escritorio en C# segun requerimientos.</p>
+                </article>
+              </div>
+            </section>
+
+            <section class="section-card" id="educacion">
+              <div class="section-title">
+                <h2>Educacion</h2>
+              </div>
+              <div class="education-grid">
+                <article class="education-item">
+                  <strong>Universidad Tecnologica de Panama</strong>
+                  <p>Licenciatura en Desarrollo y Gestion de Software | mar. 2023 - Actualidad</p>
+                </article>
+                <article class="education-item">
+                  <strong>Universidad Tecnologica de Panama</strong>
+                  <p>Tecnico en Ingenieria con Especializacion en Desarrollo y Gestion de Software | mar. 2023 - mar. 2026</p>
+                </article>
+                <article class="education-item">
+                  <strong>Universidad Latina de Panama</strong>
+                  <p>Maestria en Gerencia Informatica con Enfasis en Seguridad Computacional | mar. 2014 - dic. 2016</p>
+                </article>
+                <article class="education-item">
+                  <strong>Universidad Tecnologica de Panama</strong>
+                  <p>Licenciatura en Electronica y Sistemas de Comunicaciones | mar. 2007 - dic. 2012</p>
+                </article>
+                <article class="education-item">
+                  <strong>Universidad Tecnologica de Panama</strong>
+                  <p>Tecnico en Ingenieria con Especializacion en Electronica y Sistemas de Comunicacion | mar. 2007 - dic. 2010</p>
+                </article>
+              </div>
+            </section>
+          </main>
+
+          <aside class="side-flow" aria-label="Informacion complementaria">
+            <section class="side-card accent" id="contacto">
+              <h2>Contacto</h2>
+              <div class="contact-list">
+                <div class="contact-item">
+                  <strong>Telefono</strong>
+                  <p><a href="tel:+50766793944">+507 6679-3944</a></p>
+                </div>
+                <div class="contact-item">
+                  <strong>Correo</strong>
+                  <p><a href="mailto:dortegana@hotmail.com">dortegana@hotmail.com</a></p>
+                </div>
+                <div class="contact-item">
+                  <strong>GitHub</strong>
+                  <p><a href="https://github.com/DAISORNA" target="_blank" rel="noreferrer">github.com/DAISORNA</a></p>
+                </div>
+                <div class="contact-item">
+                  <strong>Ubicacion</strong>
+                  <p>Panama</p>
                 </div>
               </div>
-            </div>
-          </header>
+            </section>
 
-      <section>
-        <h2>Resumen Profesional</h2>
-        <p>
-          Profesional con más de 12 años de experiencia en operaciones, monitoreo y gestión de incidencias en entornos tecnológicos críticos, incluyendo telecomunicaciones, redes corporativas, infraestructura TI, sistemas ferroviarios, hardware industrial y plataformas de software.
-          Experiencia en soporte y administración de redes, equipos de comunicación, servidores, sistemas eléctricos y plataformas tecnológicas críticas, así como en análisis, resolución de fallas y continuidad operativa.
-          Enfocado en la seguridad, estabilidad y documentación técnica de los sistemas, con capacidad para coordinar incidentes y garantizar la disponibilidad de servicios críticos.
-          Combino experiencia en infraestructura y hardware con formación activa en desarrollo de software, automatización, ciberseguridad e inteligencia artificial aplicada a procesos tecnológicos.
-        </p>
-      </section>
+            <section class="side-card" id="competencias">
+              <h2>Competencias Tecnicas</h2>
+              <ul class="skill-cloud">
+                <li>Gestion de incidencias</li>
+                <li>Coordinacion operativa</li>
+                <li>Troubleshooting</li>
+                <li>Continuidad operativa</li>
+                <li>Documentacion tecnica</li>
+                <li>CBTC</li>
+                <li>SCADA</li>
+                <li>PLC</li>
+                <li>Fibra optica</li>
+                <li>Switching</li>
+                <li>Routing</li>
+                <li>Redes inalambricas</li>
+                <li>Servidores</li>
+                <li>Java</li>
+                <li>JavaScript</li>
+                <li>Python</li>
+                <li>C#</li>
+                <li>Kotlin</li>
+                <li>PostgreSQL</li>
+                <li>SQL Server</li>
+                <li>Oracle</li>
+                <li>Git y GitHub</li>
+                <li>Linux y Windows</li>
+                <li>Secure SDLC</li>
+                <li>Agentes de IA</li>
+              </ul>
+            </section>
 
-      <section>
-        <h2>Experiencia Profesional</h2>
+            <section class="side-card">
+              <h2>Certificaciones y Cursos</h2>
+              <ul class="cert-list">
+                <li>Cisco Networking Academy - CCNA Routing and Switching</li>
+                <li>AWS Arquitectura en la Nube</li>
+                <li>AWS Fundamentos de la Nube</li>
+                <li>AWS Operaciones en la Nube</li>
+                <li>AWS Ingenieria de Datos</li>
+                <li>Conceptos de Redes en la Nube</li>
+                <li>Analisis Forense de Redes</li>
+                <li>Selenium Esencial</li>
+                <li>Programming for Everybody - Python</li>
+                <li>Fibra Optica y Cableado Estructurado</li>
+                <li>Television Digital en Panama</li>
+                <li>Primeros Auxilios y Trabajo en Equipo</li>
+              </ul>
+            </section>
 
-        <article class="role">
-          <h3>Tecnico de Senalizacion (CBTC) - ALSTOM Panama</h3>
-          <p><strong>Fecha:</strong> Feb 2024 - Presente</p>
-          <ul>
-            <li>Ejecucion de mantenimiento preventivo y correctivo en sistemas CBTC, garantizando la continuidad operativa y disponibilidad de plataformas criticas ferroviarias.</li>
-            <li>Monitoreo, analisis y seguimiento de incidentes y averias, aplicando estandares de calidad y seguridad.</li>
-            <li>Administracion y soporte de infraestructura de comunicaciones entre trenes y centro de control, incluyendo redes de fibra optica, switches, antenas, servidores y sistemas SCADA.</li>
-            <li>Gestion de entornos de comunicacion segura y soporte a sistemas tecnologicos ferroviarios de mision critica.</li>
-          </ul>
-        </article>
+            <section class="side-card">
+              <h2>Idiomas</h2>
+              <ul class="skill-cloud">
+                <li>Espanol nativo</li>
+                <li>Ingles intermedio</li>
+              </ul>
+            </section>
 
-        <article class="role">
-          <h3>Tecnico de Energia - ALSTOM Panama</h3>
-          <p><strong>Fecha:</strong> Ene 2022 - Feb 2024</p>
-          <ul>
-            <li>Ejecucion de mantenimiento preventivo y correctivo en sistemas electricos de media y baja tension para subestaciones y gabinetes electricos de la Linea 2 del Metro de Panama.</li>
-            <li>Diagnostico y analisis de fallas electricas, implementando acciones correctivas para garantizar la continuidad operativa del servicio.</li>
-            <li>Experiencia en operacion, monitoreo y verificacion de disyuntores, reles de proteccion, PLC, sistemas SCADA y equipos electricos industriales.</li>
-            <li>Realizacion de pruebas electricas y pruebas de aislamiento en transformadores de subestaciones de traccion, estaciones de pasajeros y acometidas de potencia, cumpliendo estandares de seguridad, confiabilidad y disponibilidad operacional.</li>
-          </ul>
-        </article>
+            <section class="side-card">
+              <h2>Version Digital</h2>
+              <div class="qr-box">
+                <img src="qr.jpg" alt="Codigo QR de la hoja de vida digital" />
+                <p>Escanea el codigo para abrir la version web de la hoja de vida.</p>
+              </div>
+            </section>
 
-        <article class="role">
-          <h3>Tecnico de Material Rodante - ALSTOM Panama</h3>
-          <p><strong>Fecha:</strong> Dic 2019 - Dic 2022</p>
-          <ul>
-            <li>Ejecucion de mantenimiento preventivo y correctivo en trenes y sistemas de material rodante del Metro de Panama, garantizando la disponibilidad y continuidad operativa de los equipos.</li>
-            <li>Diagnostico, analisis y resolucion de averias tecnicas, incluyendo elaboracion de informes de investigacion y analisis de causa raiz.</li>
-            <li>Monitoreo y seguimiento de fallas recurrentes, proponiendo mejoras y lineas de investigacion para optimizar el rendimiento y confiabilidad de los sistemas ferroviarios.</li>
-            <li>Experiencia en analisis de registros y software de mantenimiento de equipos a bordo, contribuyendo a la optimizacion de procesos de mantenimiento y gestion de incidencias tecnicas.</li>
-          </ul>
-        </article>
+            <section class="side-card">
+              <h2>Referencias</h2>
+              <p class="references">Disponibles a solicitud.</p>
+            </section>
+          </aside>
+        </div>
+      </article>
 
-        <article class="role">
-          <h3>Ingeniero de Pruebas y Puesta en Marcha - ALSTOM Panama</h3>
-          <p><strong>Fecha:</strong> Jun 2018 - Dic 2019</p>
-          <ul>
-            <li>Planificacion, coordinacion y ejecucion de pruebas para subsistemas ferroviarios (senalizacion, comunicacion, energia, material rodante, catenaria).</li>
-            <li>Produccion y ejecucion de planes de pruebas; coordinacion de recursos y participantes en sitio.</li>
-            <li>Gestion de planes de accion ante mal funcionamiento para alcanzar objetivos contractuales.</li>
-          </ul>
-        </article>
-
-        <article class="role">
-          <h3>Operador de Redes Electronicas (NOC) - Telered, Panama</h3>
-          <p><strong>Fecha:</strong> Abr 2017 - Jun 2018</p>
-          <ul>
-            <li>Monitoreo y aseguramiento de disponibilidad de servicios Clave y Clave Pago a nivel nacional.</li>
-            <li>Seguimiento de procesos de intercambio de transacciones ACH en horarios establecidos.</li>
-            <li>Coordinacion de incidencias con proveedor internacional (ATH) durante procesos nocturnos locales y regionales.</li>
-          </ul>
-        </article>
-
-        <article class="role">
-          <h3>Ingeniero en Operaciones de Datos y Entrega de Servicios - Cable Onda</h3>
-          <p><strong>Fecha:</strong> Mar 2015 - Mar 2017</p>
-          <ul>
-            <li>Administracion, aprovisionamiento y soporte de infraestructura de red.</li>
-            <li>Configuracion y troubleshooting de servicios (P2P, Internet, VRF, BGP).</li>
-            <li>Atencion de incidentes escalados y documentacion tecnica (actividades, diagramas y reportes).</li>
-          </ul>
-        </article>
-
-        <article class="role">
-          <h3>Ingeniero de Monitoreo y Soporte (NOC) - Cable Onda, Panama</h3>
-          <p><strong>Fecha:</strong> Oct 2012 - Mar 2015</p>
-          <ul>
-            <li>Monitoreo de red corporativa (CORE y distribucion) y gestion de incidentes con clientes corporativos.</li>
-            <li>Coordinacion de visitas tecnicas con planta/contratistas y soporte remoto a personal en campo.</li>
-            <li>Troubleshooting en equipos (Cisco, Tricom, Huawei) y gestion de escalamiento con proveedores de ultima milla.</li>
-          </ul>
-        </article>
-
-        <article class="role">
-          <h3>Soporte Tecnico - Network Solution, Panama</h3>
-          <p><strong>Fecha:</strong> Mar 2012 - Sep 2012</p>
-          <ul>
-            <li>Soporte a usuarios y resolucion de incidencias en red interna de clientes corporativos.</li>
-            <li>Mantenimiento de equipos en red; instalacion de software y hardware; configuracion de correo.</li>
-            <li>Respaldo de usuarios finales y servidores; asistencia tecnologica y buenas practicas de seguridad.</li>
-          </ul>
-        </article>
-      </section>
-
-      <section>
-        <h2>Educacion</h2>
-        <ul>
-          <li>Universidad Tecnológica de Panamá - Licenciatura en Electrónica y Sistemas de Comunicaciones (mar. 2007 - dic. 2012)</li>
-          <li>Universidad Latina de Panamá - Mestría en Gerencia Informática con Enfasis en Seguridad Computacional (mar. 2014 - dic. 2016)</li>
-          <li>Universidad Tecnológica de Panamá - Licenciatura en Desarrollo y Gestión de Software (mar. 2023 - Actualidad)</li>
-          <li>Universidad Tecnológica de Panamá - Técnico en Ingeniería con Especialización en Desarrollo y Gestión de Software (mar. 2023 - mar. 2026)</li>
-          <li>Universidad Tecnológica de Panamá - Técnico en Ingeniería con Especialización en Electrónica y Sistemas de Comunicación (mar. 2007 - dic. 2010)</li>
-        </ul>
-      </section>
-
-      <section>
-        <h2>Certificaciones y Cursos</h2>
-        <ul>
-          <li>Cisco Networking Academy - CCNA Routing and Switching</li>
-          <li>Seminario de Fibra Optica</li>
-          <li>Seminario de Cableado Estructurado</li>
-          <li>Television Digital en Panama (desafios del apagon analogico)</li>
-          <li>Conceptos de Redes en la Nube: soluciones y servicios</li>
-          <li>AWS Arquitectura en la Nube</li>
-          <li>AWS Fundamentos de la Nube</li>
-          <li>AWS Operaciones en la Nube</li>
-          <li>AWS Ingeniería de Datos</li>
-          <li>Analisis Forense de Redes</li>
-          <li>Selenium Esencial</li>
-          <li>Programming for Everybody (Getting Started with Python)</li>
-          <li>Curso de Primeros Auxilios</li>
-          <li>Curso de Trabajo en Equipo</li>
-        </ul>
-      </section>
-
-      <section>
-        <h2>Competencias Tecnicas</h2>
-        <ul>
-          <li>Gestion de incidencias, coordinacion operativa, troubleshooting, continuidad operativa, documentacion tecnica.</li>
-          <li>Mantenimiento preventivo y correctivo en sistemas ferroviarios, electricos y de comunicaciones.</li>
-          <li>Redes y telecomunicaciones: switching, routing, redes inalambricas, soporte de servicios de red.</li>
-          <li>Sistemas y equipos: CBTC, SCADA, PLC, disyuntores, reles de proteccion, transformadores, servidores.</li>
-          <li>Tecnologias de operaciones: Switch, Router, CMTS, OCCAM, IAD, MP-124.</li>
-          <li>Lenguajes: Java, JavaScript, Python, C#, Kotlin.</li>
-          <li>Bases de datos: PostgreSQL, SQL Server, Oracle.</li>
-          <li>Herramientas: Git, GitHub, Git Bash, Visual Studio Code, Visual Studio, Android Studio.</li>
-          <li>Sistemas operativos: Linux y Windows.</li>
-          <li>Manejo de agentes de inteligencia artificial.</li>
-          <li>Seguridad y desarrollo: buenas practicas de seguridad, Secure SDLC, trabajo colaborativo.</li>
-          <li>Inteligencia artificial aplicada al desarrollo, analisis, automatizacion y soporte documental.</li>
-        </ul>
-      </section>
-
-      <section>
-        <h2>Desarrollo de Software y Proyectos</h2>
-        <ul>
-          <li>Aplicaciones CRUD y APIs orientadas a datos, aplicando POO y buenas practicas.</li>
-          <li>Diseno de bases de datos relacionales, consultas SQL y reportes para casos de uso academicos.</li>
-          <li>Automatizaciones y scripts para tareas repetitivas y validacion de datos.</li>
-          <li>Prototipos con inteligencia artificial para asistentes, extraccion/resumen de informacion y apoyo a soporte/documentacion.</li>
-          <li>Prototipos Android (Kotlin) y utilidades de escritorio (C#) segun requerimientos.</li>
-        </ul>
-      </section>
-
-      <section>
-        <h2>Idiomas</h2>
-        <ul>
-          <li>Espanol</li>
-          <li>Ingles (intermedio)</li>
-        </ul>
-      </section>
-
-      <section>
-        <h2>Referencias</h2>
-        <p>Disponibles a solicitud.</p>
-      </section>
-        </main>
-      </div>
+      <p class="footer-note">Hoja de vida optimizada para lectura web, dispositivos moviles e impresion en PDF.</p>
     </div>
+
+    <script>
+      document.getElementById("printButton").addEventListener("click", function () {
+        window.print();
+      });
+    </script>
   </body>
 </html>
