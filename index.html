@@ -593,98 +593,25 @@
 
       @media print {
         @page {
-          margin: 12mm;
+          margin: 8mm;
         }
 
-        body {
-          color: #111827;
-          background: #ffffff;
+        * {
+          print-color-adjust: exact;
+          -webkit-print-color-adjust: exact;
         }
 
-        body::before,
-        .site-actions,
-        .nav-card,
-        .profile-card,
-        .qr-box {
-          display: none !important;
-        }
-
-        .page-shell {
-          width: 100%;
-          margin: 0;
-        }
-
-        .resume,
         .section-card,
         .side-card,
         .role,
         .project-card,
         .education-item,
         .contact-item {
-          border-color: #d1d5db;
-          box-shadow: none;
-          background: #ffffff;
-        }
-
-        .resume {
-          border: 0;
-          border-radius: 0;
-        }
-
-        .hero {
-          display: block;
-          padding: 0 0 14px;
-          color: #111827;
-          background: #ffffff;
-          border-bottom: 2px solid #d1d5db;
-        }
-
-        .hero::after,
-        .eyebrow,
-        .hero-tags,
-        .quick-stats {
-          display: none;
-        }
-
-        h1 {
-          margin-bottom: 8px;
-          color: #111827;
-          font-size: 32pt;
-          letter-spacing: -0.04em;
-        }
-
-        .hero-subtitle {
-          color: #374151;
-        }
-
-        .content-grid {
-          display: block;
-          padding: 14px 0 0;
-        }
-
-        .main-flow,
-        .side-flow {
-          display: block;
-        }
-
-        .section-card,
-        .side-card {
           break-inside: avoid;
-          margin-bottom: 12px;
-          padding: 14px 0;
-          border: 0;
-          border-radius: 0;
         }
 
-        .role {
-          break-inside: avoid;
-          padding: 10px 0;
-          border-width: 0 0 1px;
-          border-radius: 0;
-        }
-
-        .footer-note {
-          display: none;
+        .site-actions {
+          display: none !important;
         }
       }
     </style>
@@ -739,7 +666,6 @@
     <div class="page-shell">
       <div class="site-actions" aria-label="Acciones de la hoja de vida">
         <button class="btn btn-primary" id="printButton" type="button">Imprimir / Guardar PDF</button>
-        <a class="btn" href="https://github.com/DAISORNA/CV_David_Ortega" target="_blank" rel="noreferrer">Ver en GitHub</a>
       </div>
 
       <article class="resume">
