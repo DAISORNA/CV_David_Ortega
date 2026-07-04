@@ -80,48 +80,6 @@
         margin: 28px auto 52px;
       }
 
-      .site-actions {
-        display: flex;
-        justify-content: flex-end;
-        gap: 10px;
-        margin-bottom: 14px;
-      }
-
-      .btn {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        min-height: 42px;
-        padding: 10px 16px;
-        border: 1px solid rgba(23, 63, 58, 0.16);
-        border-radius: 999px;
-        color: var(--accent);
-        font-size: 0.88rem;
-        font-weight: 800;
-        letter-spacing: 0.01em;
-        text-decoration: none;
-        background: rgba(255, 253, 248, 0.78);
-        box-shadow: 0 10px 28px rgba(23, 33, 31, 0.08);
-        cursor: pointer;
-        transition:
-          transform 180ms ease,
-          box-shadow 180ms ease,
-          background 180ms ease;
-      }
-
-      .btn:hover,
-      .btn:focus-visible {
-        transform: translateY(-2px);
-        background: #ffffff;
-        box-shadow: 0 16px 36px rgba(23, 33, 31, 0.13);
-      }
-
-      .btn-primary {
-        color: #ffffff;
-        border-color: transparent;
-        background: linear-gradient(135deg, var(--accent), #285f57);
-      }
-
       .resume {
         overflow: hidden;
         border: 1px solid rgba(23, 63, 58, 0.12);
@@ -548,15 +506,6 @@
           margin-top: 10px;
         }
 
-        .site-actions {
-          justify-content: stretch;
-        }
-
-        .site-actions .btn {
-          flex: 1;
-          padding-inline: 10px;
-        }
-
         .resume {
           border-radius: 22px;
         }
@@ -609,10 +558,6 @@
         .contact-item {
           break-inside: avoid;
         }
-
-        .site-actions {
-          display: none !important;
-        }
       }
     </style>
 
@@ -664,10 +609,6 @@
 
   <body>
     <div class="page-shell">
-      <div class="site-actions" aria-label="Acciones de la hoja de vida">
-        <button class="btn btn-primary" id="printButton" type="button">Imprimir / Guardar PDF</button>
-      </div>
-
       <article class="resume">
         <header class="hero" id="inicio">
           <div>
@@ -999,11 +940,5 @@
 
       <p class="footer-note">Hoja de vida optimizada para lectura web, dispositivos móviles e impresión en PDF.</p>
     </div>
-
-    <script>
-      document.getElementById("printButton").addEventListener("click", function () {
-        window.print();
-      });
-    </script>
   </body>
 </html>
